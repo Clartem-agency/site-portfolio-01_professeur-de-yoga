@@ -289,45 +289,63 @@
     </section>
 
     <!-- Gallery Section -->
-    <section id="gallery" class="py-20 bg-background">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-light mb-6 text-foreground">Bienvenue dans
-            <span class="block text-primary">votre refuge</span>
-          </h2>
-          <p class="text-xl text-muted-foreground max-w-2xl mx-auto">Découvrez l'atmosphère apaisante de notre studio</p>
+<section id="gallery" class="py-20 bg-background">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-light mb-6 text-foreground">Bienvenue dans
+        <span class="block text-primary">votre refuge</span>
+      </h2>
+      <p class="text-xl text-muted-foreground max-w-2xl mx-auto">Découvrez l'atmosphère apaisante de notre studio</p>
+    </div>
+    <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
+      <!-- Image 1 -->
+      <a href="images/galerie-studio-large.webp" class="gallery-item group relative overflow-hidden rounded-xl shadow-soft hover:shadow-card transition-all duration-300 md:col-span-2 md:row-span-2 cursor-pointer" data-index="0">
+        <img src="images/galerie-studio-large.webp" alt="Vue large du studio L'Instant Présent, baigné de lumière" class="w-full h-64 md:h-full object-cover transition-transform duration-300 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"/></svg>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
-          <div class="relative group overflow-hidden rounded-xl shadow-soft hover:shadow-card transition-all duration-300 md:col-span-2 md:row-span-2">
-            <img src="images/galerie-studio-large.webp" alt="Vue large du studio L'Instant Présent, baigné de lumière" class="w-full h-64 md:h-full object-cover transition-transform duration-300 group-hover:scale-110">
-            <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </div>
-          <div class="relative group overflow-hidden rounded-xl shadow-soft hover:shadow-card transition-all duration-300">
-            <img src="images/galerie-coin-tisane.webp" alt="Coin tisane avec livre sur la pleine conscience" class="w-full h-64 md:h-full object-cover transition-transform duration-300 group-hover:scale-110">
-            <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </div>
-          <div class="relative group overflow-hidden rounded-xl shadow-soft hover:shadow-card transition-all duration-300">
-            <img src="images/galerie-accessoires.webp" alt="Accessoires de yoga : tapis, brique et sangle" class="w-full h-64 md:h-full object-cover transition-transform duration-300 group-hover:scale-110">
-            <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </div>
-          <div class="relative group overflow-hidden rounded-xl shadow-soft hover:shadow-card transition-all duration-300">
-            <img src="images/galerie-cours-session.webp" alt="Cours de yoga en session avec plusieurs participants" class="w-full h-64 md:h-full object-cover transition-transform duration-300 group-hover:scale-110">
-            <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </div>
-          <div class="relative group overflow-hidden rounded-xl shadow-soft hover:shadow-card transition-all duration-300">
-            <img src="images/galerie-lumiere-naturelle.webp" alt="Vue de l'intérieur du studio un jour de pluie, ambiance refuge" class="w-full h-64 md:h-full object-cover transition-transform duration-300 group-hover:scale-110">
-            <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </div>
-          <div class="relative group overflow-hidden rounded-xl shadow-soft hover:shadow-card transition-all duration-300 col-span-2 md:col-span-1">
-            <img src="images/galerie-facade-exterieure.webp" alt="Façade extérieure du studio de yoga" class="w-full h-64 md:h-full object-cover transition-transform duration-300 group-hover:scale-110">
-            <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </div>
+      </a>
+      <!-- Image 2 -->
+      <a href="images/galerie-coin-tisane.webp" class="gallery-item group relative overflow-hidden rounded-xl shadow-soft hover:shadow-card transition-all duration-300 cursor-pointer" data-index="1">
+        <img src="images/galerie-coin-tisane.webp" alt="Coin tisane avec livre sur la pleine conscience" class="w-full h-64 md:h-full object-cover transition-transform duration-300 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"/></svg>
         </div>
-        <div class="text-center mt-12">
-          <p class="text-lg text-muted-foreground">Chaque détail a été pensé pour votre bien-être et votre sérénité</p>
+      </a>
+      <!-- Image 3 -->
+      <a href="images/galerie-accessoires.webp" class="gallery-item group relative overflow-hidden rounded-xl shadow-soft hover:shadow-card transition-all duration-300 cursor-pointer" data-index="2">
+        <img src="images/galerie-accessoires.webp" alt="Accessoires de yoga : tapis, brique et sangle" class="w-full h-64 md:h-full object-cover transition-transform duration-300 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"/></svg>
         </div>
-      </div>
-    </section>
+      </a>
+      <!-- Image 4 -->
+      <a href="images/galerie-cours-session.webp" class="gallery-item group relative overflow-hidden rounded-xl shadow-soft hover:shadow-card transition-all duration-300 cursor-pointer" data-index="3">
+        <img src="images/galerie-cours-session.webp" alt="Cours de yoga en session avec plusieurs participants" class="w-full h-64 md:h-full object-cover transition-transform duration-300 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"/></svg>
+        </div>
+      </a>
+      <!-- Image 5 -->
+      <a href="images/galerie-lumiere-naturelle.webp" class="gallery-item group relative overflow-hidden rounded-xl shadow-soft hover:shadow-card transition-all duration-300 cursor-pointer" data-index="4">
+        <img src="images/galerie-lumiere-naturelle.webp" alt="Vue de l'intérieur du studio un jour de pluie, ambiance refuge" class="w-full h-64 md:h-full object-cover transition-transform duration-300 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"/></svg>
+        </div>
+      </a>
+      <!-- Image 6 -->
+      <a href="images/galerie-facade-exterieure.webp" class="gallery-item group relative overflow-hidden rounded-xl shadow-soft hover:shadow-card transition-all duration-300 col-span-2 md:col-span-1 cursor-pointer" data-index="5">
+        <img src="images/galerie-facade-exterieure.webp" alt="Façade extérieure du studio de yoga" class="w-full h-64 md:h-full object-cover transition-transform duration-300 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"/></svg>
+        </div>
+      </a>
+    </div>
+    <div class="text-center mt-12">
+      <p class="text-lg text-muted-foreground">Chaque détail a été pensé pour votre bien-être et votre sérénité</p>
+    </div>
+  </div>
+</section>
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="py-20 bg-gradient-to-b from-sage-light/20 to-background">
@@ -956,6 +974,130 @@
       }
     });
   </script>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="fixed inset-0 bg-black/80 z-[100] hidden items-center justify-center p-4 transition-opacity duration-300">
+  <div class="relative w-full h-full flex items-center justify-center">
+    <!-- Close Button -->
+    <button id="lightbox-close" class="absolute top-4 right-4 text-white/70 hover:text-white transition-colors z-20">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+
+    <!-- Previous Button -->
+    <button id="lightbox-prev" class="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors z-20 p-2 bg-black/20 rounded-full">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+    </button>
+
+    <!-- Next Button -->
+    <button id="lightbox-next" class="absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors z-20 p-2 bg-black/20 rounded-full">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </button>
+
+    <!-- Image Container -->
+    <div class="relative max-w-[90vw] max-h-[90vh]">
+      <img id="lightbox-image" src="" alt="Vue agrandie de la galerie" class="max-w-full max-h-full object-contain rounded-lg shadow-2xl">
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Accordion script (already present)
+    const accordion = document.getElementById('faq-accordion');
+    if (accordion) {
+      const triggers = accordion.querySelectorAll('.accordion-trigger');
+      triggers.forEach(trigger => {
+        trigger.addEventListener('click', function() {
+          const content = this.parentElement.nextElementSibling;
+          const isOpen = this.getAttribute('aria-expanded') === 'true';
+          triggers.forEach(otherTrigger => {
+            if (otherTrigger !== this) {
+              otherTrigger.setAttribute('aria-expanded', 'false');
+              otherTrigger.parentElement.nextElementSibling.style.maxHeight = null;
+              otherTrigger.querySelector('svg').classList.remove('rotate-180');
+            }
+          });
+          if (isOpen) {
+            this.setAttribute('aria-expanded', 'false');
+            content.style.maxHeight = null;
+            this.querySelector('svg').classList.remove('rotate-180');
+          } else {
+            this.setAttribute('aria-expanded', 'true');
+            content.style.maxHeight = content.scrollHeight + 'px';
+            this.querySelector('svg').classList.add('rotate-180');
+          }
+        });
+      });
+    }
+
+    // --- START: Gallery Lightbox Script ---
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const closeBtn = document.getElementById('lightbox-close');
+    const prevBtn = document.getElementById('lightbox-prev');
+    const nextBtn = document.getElementById('lightbox-next');
+
+    if (galleryItems.length > 0 && lightbox) {
+      let currentIndex = 0;
+      const imageSources = Array.from(galleryItems).map(item => item.href);
+
+      function showImage(index) {
+        lightboxImage.src = imageSources[index];
+        currentIndex = index;
+      }
+
+      function openLightbox(e) {
+        e.preventDefault();
+        const index = parseInt(e.currentTarget.dataset.index, 10);
+        showImage(index);
+        lightbox.classList.remove('hidden');
+        lightbox.classList.add('flex');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+      }
+
+      function closeLightbox() {
+        lightbox.classList.add('hidden');
+        lightbox.classList.remove('flex');
+        document.body.style.overflow = ''; // Restore scrolling
+      }
+
+      function showNextImage() {
+        const nextIndex = (currentIndex + 1) % imageSources.length;
+        showImage(nextIndex);
+      }
+
+      function showPrevImage() {
+        const prevIndex = (currentIndex - 1 + imageSources.length) % imageSources.length;
+        showImage(prevIndex);
+      }
+
+      function handleKeydown(e) {
+        if (lightbox.classList.contains('hidden')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') showNextImage();
+        if (e.key === 'ArrowLeft') showPrevImage();
+      }
+
+      galleryItems.forEach(item => item.addEventListener('click', openLightbox));
+      
+      closeBtn.addEventListener('click', closeLightbox);
+      nextBtn.addEventListener('click', showNextImage);
+      prevBtn.addEventListener('click', showPrevImage);
+      
+      // Close lightbox when clicking on the background
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+          closeLightbox();
+        }
+      });
+
+      document.addEventListener('keydown', handleKeydown);
+    }
+    // --- END: Gallery Lightbox Script ---
+  });
+</script>
+  
 </body>
 
 </html>
