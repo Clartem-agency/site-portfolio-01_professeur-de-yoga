@@ -4,9 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>L'Instant Présent - Studio de Yoga à Lille</title>
-  <meta name="description" content="Studio de yoga authentique à Lille. Cours en petits groupes pour retrouver votre calme intérieur. Professeure certifiée, réservation en ligne.">
+  <title id="meta-title"></title>
+  <meta name="description" id="meta-description" content="">
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Netlify Identity Widget for Decap CMS authentication -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <style type="text/tailwindcss">
     @layer base {
       body {
@@ -133,20 +135,13 @@
             </svg>
           </div>
           <div>
-            <h1 class="text-xl font-light text-foreground">L'Instant Présent</h1>
-            <p class="text-xs text-muted-foreground">Studio de Yoga • Lille</p>
+            <h1 id="header-logo-title" class="text-xl font-light text-foreground"></h1>
+            <p id="header-logo-subtitle" class="text-xs text-muted-foreground"></p>
           </div>
         </a>
-        <nav class="hidden lg:flex items-center space-x-8">
-          <a href="#hero" class="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium">Accueil</a>
-          <a href="#about" class="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium">À propos</a>
-          <a href="#services" class="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium">Cours</a>
-          <a href="#gallery" class="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium">Galerie</a>
-          <a href="#booking" class="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium">Planning</a>
-          <a href="#contact" class="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium">Contact</a>
-        </nav>
+        <nav id="header-nav-links" class="hidden lg:flex items-center space-x-8"></nav>
         <div class="hidden lg:flex">
-          <a href="#booking" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium h-10 px-4 py-2 bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300 hover:scale-105">Réserver</a>
+          <a id="header-cta-button" href="" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium h-10 px-4 py-2 bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300 hover:scale-105"></a>
         </div>
         <button class="lg:hidden p-2">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-foreground">
@@ -162,16 +157,17 @@
   <main>
     <!-- Hero Section -->
     <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('images/hero-background.webp');"></div>
+      <div id="hero-background" class="absolute inset-0 bg-cover bg-center bg-no-repeat"></div>
       <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/20"></div>
       <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        <h1 class="text-5xl md:text-7xl font-light mb-6 text-white leading-tight">Retrouvez votre calme intérieur,
-          <span class="block text-sage-light">au cœur de la ville</span>
+        <h1 id="hero-title" class="text-5xl md:text-7xl font-light mb-6 text-white leading-tight">
+          <span id="hero-title-part1"></span>
+          <span id="hero-title-part2" class="block text-sage-light"></span>
         </h1>
-        <p class="text-xl md:text-2xl text-white/90 mb-12 font-light max-w-2xl mx-auto leading-relaxed">L'Instant Présent, votre studio de yoga à Lille. Des cours en petits groupes pour une pratique authentique et apaisante.</p>
+        <p id="hero-subtitle" class="text-xl md:text-2xl text-white/90 mb-12 font-light max-w-2xl mx-auto leading-relaxed"></p>
         <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-          <a href="#booking" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-lg font-medium h-11 px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground shadow-hero transition-all duration-300 hover:scale-105">Voir le planning &amp; Réserver</a>
-          <a href="#about" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-lg font-medium border h-11 px-8 py-4 border-white/30 text-white hover:bg-white/10 hover:border-white transition-all duration-300">Découvrir le studio</a>
+          <a id="hero-primary-cta" href="" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-lg font-medium h-11 px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground shadow-hero transition-all duration-300 hover:scale-105"></a>
+          <a id="hero-secondary-cta" href="" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-lg font-medium border h-11 px-8 py-4 border-white/30 text-white hover:bg-white/10 hover:border-white transition-all duration-300"></a>
         </div>
       </div>
       <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
@@ -187,20 +183,17 @@
         <div class="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
           <div class="space-y-8">
             <div>
-              <h2 class="text-4xl md:text-5xl font-light mb-6 text-foreground leading-tight">Mon Histoire : De la Robe d'Avocate
-                <span class="block text-primary">au Tapis de Yoga</span>
+              <h2 class="text-4xl md:text-5xl font-light mb-6 text-foreground leading-tight">
+                <span id="about-title-part1"></span>
+                <span id="about-title-part2" class="block text-primary"></span>
               </h2>
             </div>
-            <div class="space-y-6 text-lg leading-relaxed text-muted-foreground">
-              <p>Pendant 10 ans, ma vie était rythmée par les dossiers urgents et la pression constante. J'étais avocate à Paris, et j'avais oublié l'essentiel : respirer. Le burn-out n'a pas été une fin, mais un commencement. C'est sur un tapis de yoga que j'ai réappris à écouter mon corps et à apaiser mon esprit.</p>
-              <p>Cette expérience a transformé ma vie. J'ai alors décidé de partager ce cadeau. Aujourd'hui, ma mission avec L'Instant Présent est simple : vous offrir une véritable parenthèse, un refuge loin de l'agitation.</p>
-              <p class="text-primary font-medium">Ici, pas de compétition, juste une écoute bienveillante pour vous aider à vous reconnecter à vous-même, à votre rythme.</p>
-            </div>
-            <a href="#" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium h-10 px-4 py-2 mt-8 border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300">Suivez nos coulisses sur Instagram</a>
+            <div id="about-paragraphs" class="space-y-6 text-lg leading-relaxed text-muted-foreground"></div>
+            <a id="about-instagram-button" href="" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium h-10 px-4 py-2 mt-8 border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"></a>
           </div>
           <div class="relative">
             <div class="relative overflow-hidden rounded-2xl shadow-card">
-              <img src="images/professeure-chloe.webp" alt="Chloé Moreau, professeure de yoga" class="w-full h-[600px] object-cover">
+              <img id="about-image" src="" alt="" class="w-full h-[600px] object-cover">
               <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
             </div>
             <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-sage rounded-full opacity-60"></div>
@@ -214,233 +207,49 @@
     <section id="services" class="py-20 bg-gradient-section">
       <div class="container mx-auto px-6">
         <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-light mb-6 text-foreground">Nos Cours &amp;
-            <span class="block text-primary">Formules</span>
+          <h2 class="text-4xl md:text-5xl font-light mb-6 text-foreground">
+            <span id="services-title-part1"></span>
+            <span id="services-title-part2" class="block text-primary"></span>
           </h2>
-          <p class="text-xl text-muted-foreground max-w-2xl mx-auto">Choisissez la formule qui correspond à votre rythme et à vos besoins</p>
+          <p id="services-subtitle" class="text-xl text-muted-foreground max-w-2xl mx-auto"></p>
         </div>
-        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <div class="rounded-lg border text-card-foreground shadow-sm relative overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-card bg-card hover:bg-gradient-card">
-            <div class="flex flex-col space-y-1.5 p-6 text-center pb-4">
-              <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-sage/20 flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-primary">
-                  <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
-                  <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
-                </svg>
-              </div>
-              <h3 class="tracking-tight text-2xl font-light text-foreground">Cours Découverte
-                <span class="block text-lg text-muted-foreground font-normal">(à l'unité)</span>
-              </h3>
-            </div>
-            <div class="p-6 pt-0 text-center space-y-6">
-              <p class="text-base leading-relaxed text-muted-foreground">Idéal pour une première fois ou une pratique occasionnelle. Venez tester une séance sans engagement.</p>
-              <div class="py-4">
-                <span class="text-4xl font-light text-primary">18€</span>
-              </div>
-              <a href="#booking" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium h-10 px-4 py-2 w-full bg-secondary hover:bg-primary hover:text-primary-foreground text-secondary-foreground transition-all duration-300">Choisir cette formule</a>
-            </div>
-          </div>
-          <div class="rounded-lg border text-card-foreground shadow-sm relative overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-card ring-2 ring-primary shadow-card bg-gradient-card">
-            <div class="absolute top-0 right-0 bg-primary text-primary-foreground px-4 py-1 text-sm font-medium">Populaire</div>
-            <div class="flex flex-col space-y-1.5 p-6 text-center pb-4">
-              <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-sage/20 flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-primary">
-                  <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path>
-                  <path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path>
-                  <path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path>
-                </svg>
-              </div>
-              <h3 class="tracking-tight text-2xl font-light text-foreground">Carte Liberté
-                <span class="block text-lg text-muted-foreground font-normal">(10 cours)</span>
-              </h3>
-            </div>
-            <div class="p-6 pt-0 text-center space-y-6">
-              <p class="text-base leading-relaxed text-muted-foreground">Pratiquez à votre rythme avec une flexibilité totale. La carte est valable 6 mois.</p>
-              <div class="py-4">
-                <span class="text-4xl font-light text-primary">150€</span>
-              </div>
-              <a href="#booking" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium h-10 px-4 py-2 w-full bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300">Choisir cette formule</a>
-            </div>
-          </div>
-          <div class="rounded-lg border text-card-foreground shadow-sm relative overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-card bg-card hover:bg-gradient-card">
-            <div class="flex flex-col space-y-1.5 p-6 text-center pb-4">
-              <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-sage/20 flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-primary">
-                  <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
-                </svg>
-              </div>
-              <h3 class="tracking-tight text-2xl font-light text-foreground">Abonnement Sanctuaire
-                <span class="block text-lg text-muted-foreground font-normal">(Mensuel)</span>
-              </h3>
-            </div>
-            <div class="p-6 pt-0 text-center space-y-6">
-              <p class="text-base leading-relaxed text-muted-foreground">Pour une pratique régulière et un engagement profond envers votre bien-être. Accès illimité à tous les cours.</p>
-              <div class="py-4">
-                <span class="text-4xl font-light text-primary">85€/mois</span>
-              </div>
-              <a href="#booking" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium h-10 px-4 py-2 w-full bg-secondary hover:bg-primary hover:text-primary-foreground text-secondary-foreground transition-all duration-300">Choisir cette formule</a>
-            </div>
-          </div>
-        </div>
+        <div id="services-plans-container" class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
         <div class="text-center mt-12">
-          <a href="#booking" class="inline-flex items-center justify-center rounded-md text-lg font-medium border px-6 py-4 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300">Consultez le planning complet pour trouver votre créneau</a>
+          <a id="services-bottom-link" href="" class="inline-flex items-center justify-center rounded-md text-lg font-medium border px-6 py-4 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"></a>
         </div>
       </div>
     </section>
 
     <!-- Gallery Section -->
-<section id="gallery" class="py-20 bg-background">
-  <div class="container mx-auto px-6">
-    <div class="text-center mb-16">
-      <h2 class="text-4xl md:text-5xl font-light mb-6 text-foreground">Bienvenue dans
-        <span class="block text-primary">votre refuge</span>
-      </h2>
-      <p class="text-xl text-muted-foreground max-w-2xl mx-auto">Découvrez l'atmosphère apaisante de notre studio</p>
-    </div>
-    <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
-      <!-- Image 1 -->
-      <a href="images/galerie-studio-large.webp" class="gallery-item group relative overflow-hidden rounded-xl shadow-soft hover:shadow-card transition-all duration-300 col-span-2 md:col-span-2 md:row-span-2 cursor-pointer" data-index="0">
-        <img src="images/galerie-studio-large.webp" alt="Vue large du studio L'Instant Présent, baigné de lumière" class="w-full h-64 md:h-full object-cover transition-transform duration-300 group-hover:scale-110">
-        <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"/></svg>
+    <section id="gallery" class="py-20 bg-background">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-light mb-6 text-foreground">
+            <span id="gallery-title-part1"></span>
+            <span id="gallery-title-part2" class="block text-primary"></span>
+          </h2>
+          <p id="gallery-subtitle" class="text-xl text-muted-foreground max-w-2xl mx-auto"></p>
         </div>
-      </a>
-      <!-- Image 2 -->
-      <a href="images/galerie-coin-tisane.webp" class="gallery-item group relative overflow-hidden rounded-xl shadow-soft hover:shadow-card transition-all duration-300 cursor-pointer" data-index="1">
-        <img src="images/galerie-coin-tisane.webp" alt="Coin tisane avec livre sur la pleine conscience" class="w-full h-64 md:h-full object-cover transition-transform duration-300 group-hover:scale-110">
-        <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"/></svg>
+        <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto"></div>
+        <div class="text-center mt-12">
+          <p id="gallery-footer-text" class="text-lg text-muted-foreground"></p>
         </div>
-      </a>
-      <!-- Image 3 -->
-      <a href="images/galerie-accessoires.webp" class="gallery-item group relative overflow-hidden rounded-xl shadow-soft hover:shadow-card transition-all duration-300 cursor-pointer" data-index="2">
-        <img src="images/galerie-accessoires.webp" alt="Accessoires de yoga : tapis, brique et sangle" class="w-full h-64 md:h-full object-cover transition-transform duration-300 group-hover:scale-110">
-        <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"/></svg>
-        </div>
-      </a>
-      <!-- Image 4 -->
-      <a href="images/galerie-cours-session.webp" class="gallery-item group relative overflow-hidden rounded-xl shadow-soft hover:shadow-card transition-all duration-300 cursor-pointer" data-index="3">
-        <img src="images/galerie-cours-session.webp" alt="Cours de yoga en session avec plusieurs participants" class="w-full h-64 md:h-full object-cover transition-transform duration-300 group-hover:scale-110">
-        <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"/></svg>
-        </div>
-      </a>
-      <!-- Image 5 -->
-      <a href="images/galerie-lumiere-naturelle.webp" class="gallery-item group relative overflow-hidden rounded-xl shadow-soft hover:shadow-card transition-all duration-300 cursor-pointer" data-index="4">
-        <img src="images/galerie-lumiere-naturelle.webp" alt="Vue de l'intérieur du studio un jour de pluie, ambiance refuge" class="w-full h-64 md:h-full object-cover transition-transform duration-300 group-hover:scale-110">
-        <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"/></svg>
-        </div>
-      </a>
-      <!-- Image 6 -->
-      <a href="images/galerie-facade-exterieure.webp" class="gallery-item group relative overflow-hidden rounded-xl shadow-soft hover:shadow-card transition-all duration-300 cursor-pointer" data-index="5">
-        <img src="images/galerie-facade-exterieure.webp" alt="Façade extérieure du studio de yoga" class="w-full h-64 md:h-full object-cover transition-transform duration-300 group-hover:scale-110">
-        <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"/></svg>
-        </div>
-      </a>
-      <!-- Image 7 (Nouvelle) -->
-      <a href="images/galerie-meditation.webp" class="gallery-item group relative overflow-hidden rounded-xl shadow-soft hover:shadow-card transition-all duration-300 cursor-pointer" data-index="6">
-        <img src="images/galerie-meditation.webp" alt="Personne en posture de méditation, vue de dos" class="w-full h-64 md:h-full object-cover transition-transform duration-300 group-hover:scale-110">
-        <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"/></svg>
-        </div>
-      </a>
-      <!-- Image 8 (Nouvelle) -->
-      <a href="images/galerie-details-deco-01.webp" class="gallery-item group relative overflow-hidden rounded-xl shadow-soft hover:shadow-card transition-all duration-300 cursor-pointer" data-index="7">
-        <img src="images/galerie-details-deco-01.webp" alt="Détail de la décoration du studio avec bougie et statuette" class="w-full h-64 md:h-full object-cover transition-transform duration-300 group-hover:scale-110">
-        <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"/></svg>
-        </div>
-      </a>
-      <!-- Image 9 (Nouvelle) -->
-      <a href="images/galerie-details-deco-02.webp" class="gallery-item group relative overflow-hidden rounded-xl shadow-soft hover:shadow-card transition-all duration-300 cursor-pointer" data-index="8">
-        <img src="images/galerie-details-deco-02.webp" alt="Détails de la décoration du studio : livres sur la méditation, plante et encens sur un banc en bois." class="w-full h-64 md:h-full object-cover transition-transform duration-300 group-hover:scale-110">
-        <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"/></svg>
-        </div>
-      </a>
-    </div>
-    <div class="text-center mt-12">
-      <p class="text-lg text-muted-foreground">Chaque détail a été pensé pour votre bien-être et votre sérénité</p>
-    </div>
-  </div>
-</section>
+      </div>
+    </section>
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="py-20 bg-gradient-to-b from-sage-light/20 to-background">
       <div class="container mx-auto px-6">
         <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-light mb-6 text-foreground">Ce qu'en disent
-            <span class="block text-primary">nos élèves</span>
+          <h2 class="text-4xl md:text-5xl font-light mb-6 text-foreground">
+            <span id="testimonials-title-part1"></span>
+            <span id="testimonials-title-part2" class="block text-primary"></span>
           </h2>
-          <p class="text-xl text-muted-foreground max-w-2xl mx-auto">Des témoignages authentiques de transformation et de bien-être</p>
+          <p id="testimonials-subtitle" class="text-xl text-muted-foreground max-w-2xl mx-auto"></p>
         </div>
-        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <div class="relative bg-gradient-card shadow-soft hover:shadow-card transition-all duration-300 border-0">
-            <div class="p-8">
-              <div class="absolute top-6 right-6">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-sage opacity-50">
-                  <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path>
-                  <path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path>
-                </svg>
-              </div>
-              <blockquote class="text-base leading-relaxed text-muted-foreground mb-8 italic">"J'étais au bord de l'épuisement. Le studio de Chloé est plus qu'une salle de sport, c'est une bulle d'oxygène. Son approche douce et sa voix apaisante m'ont permis de déconnecter. Je ressors de chaque cours plus légère et centrée."</blockquote>
-              <div class="flex items-center space-x-4">
-                <span class="relative flex shrink-0 overflow-hidden rounded-full w-12 h-12 bg-sage text-primary-foreground">
-                  <span class="flex h-full w-full items-center justify-center rounded-full bg-sage text-white font-medium">MD</span>
-                </span>
-                <div>
-                  <div class="font-medium text-foreground">Marie Dubois</div>
-                  <div class="text-sm text-muted-foreground">Directrice Marketing</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="relative bg-gradient-card shadow-soft hover:shadow-card transition-all duration-300 border-0">
-            <div class="p-8">
-              <div class="absolute top-6 right-6">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-sage opacity-50">
-                  <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path>
-                  <path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path>
-                </svg>
-              </div>
-              <blockquote class="text-base leading-relaxed text-muted-foreground mb-8 italic">"Le mal de dos lié au télétravail devenait insupportable. Grâce aux cours en petit comité, Chloé a pu corriger mes postures. En un mois, j'ai senti une différence incroyable. Et la facilité de réservation en ligne est un vrai plus."</blockquote>
-              <div class="flex items-center space-x-4">
-                <span class="relative flex shrink-0 overflow-hidden rounded-full w-12 h-12 bg-sage text-primary-foreground">
-                  <span class="flex h-full w-full items-center justify-center rounded-full bg-sage text-white font-medium">TL</span>
-                </span>
-                <div>
-                  <div class="font-medium text-foreground">Thomas Leroy</div>
-                  <div class="text-sm text-muted-foreground">Développeur Web</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="relative bg-gradient-card shadow-soft hover:shadow-card transition-all duration-300 border-0">
-            <div class="p-8">
-              <div class="absolute top-6 right-6">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-sage opacity-50">
-                  <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path>
-                  <path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path>
-                </svg>
-              </div>
-              <blockquote class="text-base leading-relaxed text-muted-foreground mb-8 italic">"Après une journée stressante, le studio de Chloé est mon havre de paix. L'ambiance est authentique, loin des 'usines à yoga'. Ici, on prend le temps, on respecte chaque corps, chaque rythme. C'est exactement ce que je cherchais."</blockquote>
-              <div class="flex items-center space-x-4">
-                <span class="relative flex shrink-0 overflow-hidden rounded-full w-12 h-12 bg-sage text-primary-foreground">
-                  <span class="flex h-full w-full items-center justify-center rounded-full bg-sage text-white font-medium">SM</span>
-                </span>
-                <div>
-                  <div class="font-medium text-foreground">Sophie Martin</div>
-                  <div class="text-sm text-muted-foreground">Consultante RH</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div id="testimonials-container" class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
         <div class="text-center mt-12">
-          <p class="text-lg text-muted-foreground">Rejoignez notre communauté bienveillante et commencez votre transformation</p>
+          <p id="testimonials-footer-text" class="text-lg text-muted-foreground"></p>
         </div>
       </div>
     </section>
@@ -449,101 +258,17 @@
     <section id="faq" class="py-20 bg-background">
       <div class="container mx-auto px-6">
         <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-light mb-6 text-foreground">Vos Questions,
-            <span class="block text-primary">Nos Réponses</span>
+          <h2 class="text-4xl md:text-5xl font-light mb-6 text-foreground">
+            <span id="faq-title-part1"></span>
+            <span id="faq-title-part2" class="block text-primary"></span>
           </h2>
-          <p class="text-xl text-muted-foreground max-w-2xl mx-auto">Toutes les informations pour vous accompagner dans votre pratique</p>
+          <p id="faq-subtitle" class="text-xl text-muted-foreground max-w-2xl mx-auto"></p>
         </div>
         <div class="max-w-4xl mx-auto">
-          <div class="space-y-4" id="faq-accordion">
-            <!-- FAQ Item 1 -->
-            <div class="bg-gradient-card rounded-xl px-6 shadow-soft border-0">
-              <h3 class="flex">
-                <button type="button" class="accordion-trigger flex flex-1 items-center justify-between hover:underline text-left text-lg font-medium text-foreground hover:text-primary transition-colors py-6">
-                  Je n'ai jamais fait de yoga, est-ce pour moi ?
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 shrink-0 transition-transform duration-200">
-                    <path d="m6 9 6 6 6-6"></path>
-                  </svg>
-                </button>
-              </h3>
-              <div class="accordion-content overflow-hidden text-sm transition-all" style="max-height: 0;">
-                <div class="pt-0 text-base leading-relaxed text-muted-foreground pb-6">Absolument ! Mes cours sont adaptés à tous les niveaux. J'accorde une attention particulière aux débutants pour qu'ils découvrent la pratique en toute sécurité et bienveillance. Chaque posture peut être adaptée selon vos capacités.</div>
-              </div>
-            </div>
-            <!-- FAQ Item 2 -->
-            <div class="bg-gradient-card rounded-xl px-6 shadow-soft border-0">
-              <h3 class="flex">
-                <button type="button" class="accordion-trigger flex flex-1 items-center justify-between hover:underline text-left text-lg font-medium text-foreground hover:text-primary transition-colors py-6">
-                  Quel matériel dois-je apporter ?
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 shrink-0 transition-transform duration-200">
-                    <path d="m6 9 6 6 6-6"></path>
-                  </svg>
-                </button>
-              </h3>
-              <div class="accordion-content overflow-hidden text-sm transition-all" style="max-height: 0;">
-                <div class="pt-0 text-base leading-relaxed text-muted-foreground pb-6">Venez simplement avec une tenue confortable. Les tapis, briques, sangles et couvertures sont fournis par le studio et désinfectés après chaque utilisation. Vous pouvez apporter votre propre tapis si vous le préférez.</div>
-              </div>
-            </div>
-            <!-- FAQ Item 3 -->
-            <div class="bg-gradient-card rounded-xl px-6 shadow-soft border-0">
-              <h3 class="flex">
-                <button type="button" class="accordion-trigger flex flex-1 items-center justify-between hover:underline text-left text-lg font-medium text-foreground hover:text-primary transition-colors py-6">
-                  Comment faire si je dois annuler un cours ?
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 shrink-0 transition-transform duration-200">
-                    <path d="m6 9 6 6 6-6"></path>
-                  </svg>
-                </button>
-              </h3>
-              <div class="accordion-content overflow-hidden text-sm transition-all" style="max-height: 0;">
-                <div class="pt-0 text-base leading-relaxed text-muted-foreground pb-6">Vous pouvez annuler ou reporter votre réservation sans frais jusqu'à 12 heures avant le début du cours, directement depuis votre espace personnel en ligne. C'est simple et rapide !</div>
-              </div>
-            </div>
-            <!-- FAQ Item 4 -->
-            <div class="bg-gradient-card rounded-xl px-6 shadow-soft border-0">
-              <h3 class="flex">
-                <button type="button" class="accordion-trigger flex flex-1 items-center justify-between hover:underline text-left text-lg font-medium text-foreground hover:text-primary transition-colors py-6">
-                  Combien de personnes y a-t-il par cours ?
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 shrink-0 transition-transform duration-200">
-                    <path d="m6 9 6 6 6-6"></path>
-                  </svg>
-                </button>
-              </h3>
-              <div class="accordion-content overflow-hidden text-sm transition-all" style="max-height: 0;">
-                <div class="pt-0 text-base leading-relaxed text-muted-foreground pb-6">Les cours sont volontairement limités à 12 personnes maximum pour garantir un accompagnement personnalisé et une atmosphère intime. Cela me permet de corriger les postures et d'adapter les exercices aux besoins de chacun.</div>
-              </div>
-            </div>
-            <!-- FAQ Item 5 -->
-            <div class="bg-gradient-card rounded-xl px-6 shadow-soft border-0">
-              <h3 class="flex">
-                <button type="button" class="accordion-trigger flex flex-1 items-center justify-between hover:underline text-left text-lg font-medium text-foreground hover:text-primary transition-colors py-6">
-                  Que se passe-t-il lors du premier cours ?
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 shrink-0 transition-transform duration-200">
-                    <path d="m6 9 6 6 6-6"></path>
-                  </svg>
-                </button>
-              </h3>
-              <div class="accordion-content overflow-hidden text-sm transition-all" style="max-height: 0;">
-                <div class="pt-0 text-base leading-relaxed text-muted-foreground pb-6">Nous prendrons quelques minutes avant le cours pour discuter de vos objectifs, d'éventuelles blessures ou limitations. Je vous guiderai ensuite tout au long de la séance avec des instructions claires et bienveillantes.</div>
-              </div>
-            </div>
-            <!-- FAQ Item 6 -->
-            <div class="bg-gradient-card rounded-xl px-6 shadow-soft border-0">
-              <h3 class="flex">
-                <button type="button" class="accordion-trigger flex flex-1 items-center justify-between hover:underline text-left text-lg font-medium text-foreground hover:text-primary transition-colors py-6">
-                  Y a-t-il un parking ?
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 shrink-0 transition-transform duration-200">
-                    <path d="m6 9 6 6 6-6"></path>
-                  </svg>
-                </button>
-              </h3>
-              <div class="accordion-content overflow-hidden text-sm transition-all" style="max-height: 0;">
-                <div class="pt-0 text-base leading-relaxed text-muted-foreground pb-6">Le studio est situé en centre-ville avec plusieurs options de stationnement à proximité. Un parking public se trouve à 2 minutes à pied, et plusieurs places de stationnement gratuit sont disponibles dans les rues adjacentes.</div>
-              </div>
-            </div>
-          </div>
+          <div class="space-y-4" id="faq-accordion"></div>
         </div>
         <div class="text-center mt-12">
-          <p class="text-lg text-muted-foreground">Une autre question ? N'hésitez pas à nous contacter directement.</p>
+          <p id="faq-footer-text" class="text-lg text-muted-foreground"></p>
         </div>
       </div>
     </section>
@@ -552,211 +277,26 @@
     <section id="booking" class="py-20 bg-gradient-section">
       <div class="container mx-auto px-6">
         <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-light mb-6 text-foreground">Réservez
-            <span class="block text-primary">Votre Tapis</span>
+          <h2 class="text-4xl md:text-5xl font-light mb-6 text-foreground">
+            <span id="booking-title-part1"></span>
+            <span id="booking-title-part2" class="block text-primary"></span>
           </h2>
-          <p class="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">Consultez nos disponibilités en temps réel et réservez votre prochaine séance en quelques clics.</p>
+          <p id="booking-subtitle" class="text-xl text-muted-foreground max-w-2xl mx-auto mb-8"></p>
         </div>
-        <div class="grid md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto">
-          <div class="rounded-lg text-card-foreground shadow-sm bg-gradient-card border-0 shadow-soft text-center">
-            <div class="p-6">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-primary mx-auto mb-3">
-                <path d="M8 2v4"></path>
-                <path d="M16 2v4"></path>
-                <rect width="18" height="18" x="3" y="4" rx="2"></rect>
-                <path d="M3 10h18"></path>
-              </svg>
-              <h3 class="font-medium text-foreground mb-1">Réservation</h3>
-              <p class="text-sm text-muted-foreground">En ligne 24h/7j</p>
-            </div>
-          </div>
-          <div class="rounded-lg text-card-foreground shadow-sm bg-gradient-card border-0 shadow-soft text-center">
-            <div class="p-6">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-primary mx-auto mb-3">
-                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-              </svg>
-              <h3 class="font-medium text-foreground mb-1">Petits groupes</h3>
-              <p class="text-sm text-muted-foreground">12 personnes max</p>
-            </div>
-          </div>
-          <div class="rounded-lg text-card-foreground shadow-sm bg-gradient-card border-0 shadow-soft text-center">
-            <div class="p-6">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-primary mx-auto mb-3">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 16 14"></polyline>
-              </svg>
-              <h3 class="font-medium text-foreground mb-1">Flexibilité</h3>
-              <p class="text-sm text-muted-foreground">Annulation 12h avant</p>
-            </div>
-          </div>
-          <div class="rounded-lg text-card-foreground shadow-sm bg-gradient-card border-0 shadow-soft text-center">
-            <div class="p-6">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-primary mx-auto mb-3">
-                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
-                <circle cx="12" cy="10" r="3"></circle>
-              </svg>
-              <h3 class="font-medium text-foreground mb-1">Centre-ville</h3>
-              <p class="text-sm text-muted-foreground">Lille, proche métro</p>
-            </div>
-          </div>
-        </div>
+        <div id="booking-info-cards-container" class="grid md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto"></div>
         <div class="max-w-4xl mx-auto">
           <div class="rounded-lg text-card-foreground shadow-sm bg-card border-0 shadow-card">
             <div class="flex flex-col space-y-1.5 p-6 text-center">
-              <h3 class="tracking-tight text-2xl font-light text-foreground">Planning de la semaine</h3>
-              <p class="text-sm text-muted-foreground">Semaine du 4 au 8 novembre 2024</p>
+              <h3 id="booking-planning-title" class="tracking-tight text-2xl font-light text-foreground"></h3>
+              <p id="booking-planning-subtitle" class="text-sm text-muted-foreground"></p>
             </div>
             <div class="p-0">
-              <div class="space-y-1">
-                <!-- Lundi -->
-                <div class="border-b border-border last:border-b-0">
-                  <div class="p-6">
-                    <h3 class="font-medium text-foreground mb-4 text-lg">Lundi</h3>
-                    <div class="space-y-3">
-                      <div class="flex items-center justify-between p-4 rounded-lg bg-sage-light/20 hover:bg-sage-light/30 transition-colors">
-                        <div class="flex items-center space-x-4">
-                          <div class="text-primary font-medium text-lg">18:30</div>
-                          <div>
-                            <div class="font-medium text-foreground">Hatha Yoga Doux</div>
-                            <div class="text-sm text-sage">3 places</div>
-                          </div>
-                        </div>
-                        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium h-10 px-4 py-2 bg-primary hover:bg-primary/90 text-primary-foreground">Réserver</button>
-                      </div>
-                      <div class="flex items-center justify-between p-4 rounded-lg bg-sage-light/20 hover:bg-sage-light/30 transition-colors">
-                        <div class="flex items-center space-x-4">
-                          <div class="text-primary font-medium text-lg">20:00</div>
-                          <div>
-                            <div class="font-medium text-foreground">Vinyasa Flow</div>
-                            <div class="text-sm text-muted-foreground">Complet</div>
-                          </div>
-                        </div>
-                        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium h-10 px-4 py-2 bg-muted text-muted-foreground cursor-not-allowed" disabled>Complet</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Mardi -->
-                <div class="border-b border-border last:border-b-0">
-                  <div class="p-6">
-                    <h3 class="font-medium text-foreground mb-4 text-lg">Mardi</h3>
-                    <div class="space-y-3">
-                      <div class="flex items-center justify-between p-4 rounded-lg bg-sage-light/20 hover:bg-sage-light/30 transition-colors">
-                        <div class="flex items-center space-x-4">
-                          <div class="text-primary font-medium text-lg">12:30</div>
-                          <div>
-                            <div class="font-medium text-foreground">Yoga du Midi</div>
-                            <div class="text-sm text-sage">5 places</div>
-                          </div>
-                        </div>
-                        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium h-10 px-4 py-2 bg-primary hover:bg-primary/90 text-primary-foreground">Réserver</button>
-                      </div>
-                      <div class="flex items-center justify-between p-4 rounded-lg bg-sage-light/20 hover:bg-sage-light/30 transition-colors">
-                        <div class="flex items-center space-x-4">
-                          <div class="text-primary font-medium text-lg">19:00</div>
-                          <div>
-                            <div class="font-medium text-foreground">Yin Yoga</div>
-                            <div class="text-sm text-sage">2 places</div>
-                          </div>
-                        </div>
-                        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium h-10 px-4 py-2 bg-primary hover:bg-primary/90 text-primary-foreground">Réserver</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Mercredi -->
-                <div class="border-b border-border last:border-b-0">
-                  <div class="p-6">
-                    <h3 class="font-medium text-foreground mb-4 text-lg">Mercredi</h3>
-                    <div class="space-y-3">
-                      <div class="flex items-center justify-between p-4 rounded-lg bg-sage-light/20 hover:bg-sage-light/30 transition-colors">
-                        <div class="flex items-center space-x-4">
-                          <div class="text-primary font-medium text-lg">18:30</div>
-                          <div>
-                            <div class="font-medium text-foreground">Hatha Yoga</div>
-                            <div class="text-sm text-sage">4 places</div>
-                          </div>
-                        </div>
-                        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium h-10 px-4 py-2 bg-primary hover:bg-primary/90 text-primary-foreground">Réserver</button>
-                      </div>
-                      <div class="flex items-center justify-between p-4 rounded-lg bg-sage-light/20 hover:bg-sage-light/30 transition-colors">
-                        <div class="flex items-center space-x-4">
-                          <div class="text-primary font-medium text-lg">20:00</div>
-                          <div>
-                            <div class="font-medium text-foreground">Méditation</div>
-                            <div class="text-sm text-sage">8 places</div>
-                          </div>
-                        </div>
-                        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium h-10 px-4 py-2 bg-primary hover:bg-primary/90 text-primary-foreground">Réserver</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Jeudi -->
-                <div class="border-b border-border last:border-b-0">
-                  <div class="p-6">
-                    <h3 class="font-medium text-foreground mb-4 text-lg">Jeudi</h3>
-                    <div class="space-y-3">
-                      <div class="flex items-center justify-between p-4 rounded-lg bg-sage-light/20 hover:bg-sage-light/30 transition-colors">
-                        <div class="flex items-center space-x-4">
-                          <div class="text-primary font-medium text-lg">12:30</div>
-                          <div>
-                            <div class="font-medium text-foreground">Yoga du Midi</div>
-                            <div class="text-sm text-sage">1 place</div>
-                          </div>
-                        </div>
-                        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium h-10 px-4 py-2 bg-primary hover:bg-primary/90 text-primary-foreground">Réserver</button>
-                      </div>
-                      <div class="flex items-center justify-between p-4 rounded-lg bg-sage-light/20 hover:bg-sage-light/30 transition-colors">
-                        <div class="flex items-center space-x-4">
-                          <div class="text-primary font-medium text-lg">19:00</div>
-                          <div>
-                            <div class="font-medium text-foreground">Vinyasa Flow</div>
-                            <div class="text-sm text-sage">6 places</div>
-                          </div>
-                        </div>
-                        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium h-10 px-4 py-2 bg-primary hover:bg-primary/90 text-primary-foreground">Réserver</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Vendredi -->
-                <div class="border-b border-border last:border-b-0">
-                  <div class="p-6">
-                    <h3 class="font-medium text-foreground mb-4 text-lg">Vendredi</h3>
-                    <div class="space-y-3">
-                      <div class="flex items-center justify-between p-4 rounded-lg bg-sage-light/20 hover:bg-sage-light/30 transition-colors">
-                        <div class="flex items-center space-x-4">
-                          <div class="text-primary font-medium text-lg">18:30</div>
-                          <div>
-                            <div class="font-medium text-foreground">Hatha Yoga Doux</div>
-                            <div class="text-sm text-muted-foreground">Complet</div>
-                          </div>
-                        </div>
-                        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium h-10 px-4 py-2 bg-muted text-muted-foreground cursor-not-allowed" disabled>Complet</button>
-                      </div>
-                      <div class="flex items-center justify-between p-4 rounded-lg bg-sage-light/20 hover:bg-sage-light/30 transition-colors">
-                        <div class="flex items-center space-x-4">
-                          <div class="text-primary font-medium text-lg">20:00</div>
-                          <div>
-                            <div class="font-medium text-foreground">Yoga Restauratif</div>
-                            <div class="text-sm text-sage">3 places</div>
-                          </div>
-                        </div>
-                        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium h-10 px-4 py-2 bg-primary hover:bg-primary/90 text-primary-foreground">Réserver</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <div id="booking-planning-days-container" class="space-y-1"></div>
             </div>
           </div>
         </div>
         <div class="text-center mt-12">
-          <a href="#booking" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-lg font-medium h-11 px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground shadow-hero transition-all duration-300 hover:scale-105">Voir le planning complet du mois</a>
+          <a id="booking-bottom-button" href="" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-lg font-medium h-11 px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground shadow-hero transition-all duration-300 hover:scale-105"></a>
         </div>
       </div>
     </section>
@@ -765,92 +305,30 @@
     <section id="contact" class="py-20 bg-background">
       <div class="container mx-auto px-6">
         <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-light mb-6 text-foreground">Contact &amp;
-            <span class="block text-primary">Accès</span>
+          <h2 class="text-4xl md:text-5xl font-light mb-6 text-foreground">
+            <span id="contact-title-part1"></span>
+            <span id="contact-title-part2" class="block text-primary"></span>
           </h2>
-          <p class="text-xl text-muted-foreground max-w-2xl mx-auto">Toutes les informations pratiques pour nous rejoindre</p>
+          <p id="contact-subtitle" class="text-xl text-muted-foreground max-w-2xl mx-auto"></p>
         </div>
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          <div class="rounded-lg text-card-foreground shadow-sm bg-gradient-card border-0 shadow-soft hover:shadow-card transition-all duration-300 text-center">
-            <div class="p-8">
-              <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-sage/20 flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-primary">
-                  <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-              </div>
-              <h3 class="font-medium text-foreground mb-4 text-lg">Adresse</h3>
-              <div class="space-y-1 mb-3">
-                <p class="text-muted-foreground">15 rue de la Paix</p>
-                <p class="text-muted-foreground">59000 Lille</p>
-              </div>
-              <p class="text-sm text-sage">Métro République Beaux-Arts (2 min à pied)</p>
-            </div>
-          </div>
-          <div class="rounded-lg text-card-foreground shadow-sm bg-gradient-card border-0 shadow-soft hover:shadow-card transition-all duration-300 text-center">
-            <div class="p-8">
-              <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-sage/20 flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-primary">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                </svg>
-              </div>
-              <h3 class="font-medium text-foreground mb-4 text-lg">Téléphone</h3>
-              <div class="space-y-1 mb-3">
-                <p class="text-muted-foreground">06 12 34 56 78</p>
-              </div>
-              <p class="text-sm text-sage">Réponse sous 24h</p>
-            </div>
-          </div>
-          <div class="rounded-lg text-card-foreground shadow-sm bg-gradient-card border-0 shadow-soft hover:shadow-card transition-all duration-300 text-center">
-            <div class="p-8">
-              <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-sage/20 flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-primary">
-                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-                </svg>
-              </div>
-              <h3 class="font-medium text-foreground mb-4 text-lg">Email</h3>
-              <div class="space-y-1 mb-3">
-                <p class="text-muted-foreground">contact@linstantpresent-lille.fr</p>
-              </div>
-              <p class="text-sm text-sage">Pour toute question</p>
-            </div>
-          </div>
-          <div class="rounded-lg text-card-foreground shadow-sm bg-gradient-card border-0 shadow-soft hover:shadow-card transition-all duration-300 text-center">
-            <div class="p-8">
-              <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-sage/20 flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-primary">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 16 14"></polyline>
-                </svg>
-              </div>
-              <h3 class="font-medium text-foreground mb-4 text-lg">Horaires du studio</h3>
-              <div class="space-y-1 mb-3">
-                <p class="text-muted-foreground">Lun-Ven : 12h-21h</p>
-                <p class="text-muted-foreground">Sam : 9h-18h</p>
-                <p class="text-muted-foreground">Dim : Fermé</p>
-              </div>
-              <p class="text-sm text-sage">Réservation en ligne 24h/7j</p>
-            </div>
-          </div>
-        </div>
+        <div id="contact-info-cards-container" class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"></div>
         <div class="max-w-4xl mx-auto">
           <div class="rounded-lg bg-card text-card-foreground shadow-sm bg-gradient-to-r from-sage-light/30 to-accent/30 border-0 shadow-card">
             <div class="p-12 text-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-primary mx-auto mb-6">
                 <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
               </svg>
-              <h3 class="text-3xl font-light text-foreground mb-4">Prêt(e) à commencer votre voyage ?</h3>
-              <p class="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">Rejoignez notre communauté bienveillante et découvrez les bienfaits d'une pratique régulière du yoga. Votre transformation commence par un simple premier pas.</p>
+              <h3 id="contact-cta-title" class="text-3xl font-light text-foreground mb-4"></h3>
+              <p id="contact-cta-text" class="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto"></p>
               <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="#booking" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-lg font-medium h-11 px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground shadow-hero transition-all duration-300 hover:scale-105">Réserver mon premier cours</a>
-                <a href="#" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-lg font-medium border h-11 px-8 py-4 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300">
+                <a id="contact-cta-primary-button" href="" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-lg font-medium h-11 px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground shadow-hero transition-all duration-300 hover:scale-105"></a>
+                <a id="contact-cta-secondary-button" href="" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-lg font-medium border h-11 px-8 py-4 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 mr-2">
                     <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                     <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
                   </svg>
-                  Suivre sur Instagram
+                  <span id="contact-cta-secondary-button-text"></span>
                 </a>
               </div>
             </div>
@@ -859,7 +337,7 @@
         <div class="mt-16 max-w-4xl mx-auto">
           <div class="rounded-lg bg-card text-card-foreground shadow-sm border-0 shadow-card overflow-hidden">
             <div class="h-64">
-              <img src="images/carte-acces.webp" alt="Plan d'accès au studio de yoga L'Instant Présent" class="w-full h-full object-cover">
+              <img id="contact-map-image" src="" alt="" class="w-full h-full object-cover">
             </div>
           </div>
         </div>
@@ -888,237 +366,383 @@
               </svg>
             </div>
             <div>
-              <h3 class="text-2xl font-light text-foreground">L'Instant Présent</h3>
-              <p class="text-sm text-muted-foreground">Studio de Yoga • Lille</p>
+              <h3 id="footer-logo-title" class="text-2xl font-light text-foreground"></h3>
+              <p id="footer-logo-subtitle" class="text-sm text-muted-foreground"></p>
             </div>
           </div>
-          <p class="text-muted-foreground leading-relaxed mb-6 max-w-md">Votre refuge au cœur de la ville. Une pratique authentique du yoga pour retrouver votre calme intérieur et vous reconnecter à vous-même.</p>
-          <div class="flex space-x-4">
-            <a href="#" class="w-10 h-10 bg-sage/20 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
-                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
-              </svg>
-            </a>
-            <a href="#" class="w-10 h-10 bg-sage/20 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
-                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-              </svg>
-            </a>
-          </div>
+          <p id="footer-description" class="text-muted-foreground leading-relaxed mb-6 max-w-md"></p>
+          <div id="footer-social-links" class="flex space-x-4"></div>
         </div>
         <div>
-          <h4 class="font-medium text-foreground mb-6">Navigation</h4>
-          <ul class="space-y-3">
-            <li><a href="#about" class="text-muted-foreground hover:text-primary transition-colors">À propos</a></li>
-            <li><a href="#services" class="text-muted-foreground hover:text-primary transition-colors">Nos cours</a></li>
-            <li><a href="#gallery" class="text-muted-foreground hover:text-primary transition-colors">Galerie</a></li>
-            <li><a href="#booking" class="text-muted-foreground hover:text-primary transition-colors">Planning</a></li>
-            <li><a href="#contact" class="text-muted-foreground hover:text-primary transition-colors">Contact</a></li>
-          </ul>
+          <h4 id="footer-nav-title" class="font-medium text-foreground mb-6"></h4>
+          <ul id="footer-nav-links" class="space-y-3"></ul>
         </div>
         <div>
-          <h4 class="font-medium text-foreground mb-6">Contact</h4>
-          <ul class="space-y-4">
-            <li class="flex items-start space-x-3">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-primary mt-0.5 flex-shrink-0">
-                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
-                <circle cx="12" cy="10" r="3"></circle>
-              </svg>
-              <div class="text-muted-foreground">
-                <div>15 rue de la Paix</div>
-                <div>59000 Lille</div>
-              </div>
-            </li>
-            <li class="flex items-center space-x-3">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-primary flex-shrink-0">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-              </svg>
-              <span class="text-muted-foreground">06 12 34 56 78</span>
-            </li>
-            <li class="flex items-center space-x-3">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-primary flex-shrink-0">
-                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-              </svg>
-              <span class="text-muted-foreground">contact@linstantpresent-lille.fr</span>
-            </li>
-          </ul>
+          <h4 id="footer-contact-title" class="font-medium text-foreground mb-6"></h4>
+          <ul id="footer-contact-info" class="space-y-4"></ul>
         </div>
       </div>
       <div class="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-        <p class="text-muted-foreground text-sm">© 2024 L'Instant Présent. Tous droits réservés.</p>
-        <div class="flex space-x-6 mt-4 md:mt-0">
-          <a href="#" class="text-muted-foreground hover:text-primary text-sm transition-colors">Mentions légales</a>
-          <a href="#" class="text-muted-foreground hover:text-primary text-sm transition-colors">Politique de confidentialité</a>
-          <a href="#" class="text-muted-foreground hover:text-primary text-sm transition-colors">CGV</a>
-        </div>
+        <p id="footer-copyright" class="text-muted-foreground text-sm"></p>
+        <div id="footer-legal-links" class="flex space-x-6 mt-4 md:mt-0"></div>
       </div>
     </div>
   </footer>
 
+  <!-- Lightbox Modal (Structure Only) -->
+  <div id="lightbox" class="fixed inset-0 bg-black/80 z-[100] hidden items-center justify-center p-4 transition-opacity duration-300">
+    <div class="relative w-full h-full flex items-center justify-center">
+      <button id="lightbox-close" class="absolute top-4 right-4 text-white/70 hover:text-white transition-colors z-20">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <button id="lightbox-prev" class="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors z-20 p-2 bg-black/20 rounded-full">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+      <button id="lightbox-next" class="absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors z-20 p-2 bg-black/20 rounded-full">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+      <div class="relative">
+        <img id="lightbox-image" src="" alt="Vue agrandie de la galerie" class="max-w-[90vw] max-h-[90vh] object-contain rounded-lg shadow-2xl">
+      </div>
+    </div>
+  </div>
+
   <script>
+    // This script remains the same for accordion and lightbox functionality
     document.addEventListener('DOMContentLoaded', function() {
-      const accordion = document.getElementById('faq-accordion');
-      if (accordion) {
-        const triggers = accordion.querySelectorAll('.accordion-trigger');
-
-        triggers.forEach(trigger => {
-          trigger.addEventListener('click', function() {
-            const content = this.parentElement.nextElementSibling;
-            const item = this.closest('.bg-gradient-card');
-            const isOpen = this.getAttribute('aria-expanded') === 'true';
-
-            // Close all other items
-            triggers.forEach(otherTrigger => {
-              if (otherTrigger !== this) {
-                otherTrigger.setAttribute('aria-expanded', 'false');
-                otherTrigger.parentElement.nextElementSibling.style.maxHeight = null;
-                otherTrigger.querySelector('svg').classList.remove('rotate-180');
-              }
-            });
-
-            // Toggle the clicked item
-            if (isOpen) {
-              this.setAttribute('aria-expanded', 'false');
-              content.style.maxHeight = null;
-              this.querySelector('svg').classList.remove('rotate-180');
-            } else {
-              this.setAttribute('aria-expanded', 'true');
-              content.style.maxHeight = content.scrollHeight + 'px';
-              this.querySelector('svg').classList.add('rotate-180');
-            }
-          });
-        });
-      }
+      // Accordion and Lightbox functionality will be initialized after content is loaded.
     });
   </script>
 
-<!-- Lightbox Modal -->
-<div id="lightbox" class="fixed inset-0 bg-black/80 z-[100] hidden items-center justify-center p-4 transition-opacity duration-300">
-  <div class="relative w-full h-full flex items-center justify-center">
-    <!-- Close Button -->
-    <button id="lightbox-close" class="absolute top-4 right-4 text-white/70 hover:text-white transition-colors z-20">
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-    </button>
+  <!-- SCRIPT D'INJECTION DE CONTENU -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('content.json')
+        .then(response => response.json())
+        .then(data => {
+          // Meta
+          document.getElementById('meta-title').textContent = data.meta.title;
+          document.getElementById('meta-description').content = data.meta.description;
 
-    <!-- Previous Button -->
-    <button id="lightbox-prev" class="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors z-20 p-2 bg-black/20 rounded-full">
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-    </button>
-
-    <!-- Next Button -->
-    <button id="lightbox-next" class="absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors z-20 p-2 bg-black/20 rounded-full">
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-    </button>
-
-    <!-- Image Container -->
-    <div class="relative">
-      <img id="lightbox-image" src="" alt="Vue agrandie de la galerie" class="max-w-[90vw] max-h-[90vh] object-contain rounded-lg shadow-2xl">
-    </div>
-  </div>
-</div>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Accordion script (already present)
-    const accordion = document.getElementById('faq-accordion');
-    if (accordion) {
-      const triggers = accordion.querySelectorAll('.accordion-trigger');
-      triggers.forEach(trigger => {
-        trigger.addEventListener('click', function() {
-          const content = this.parentElement.nextElementSibling;
-          const isOpen = this.getAttribute('aria-expanded') === 'true';
-          triggers.forEach(otherTrigger => {
-            if (otherTrigger !== this) {
-              otherTrigger.setAttribute('aria-expanded', 'false');
-              otherTrigger.parentElement.nextElementSibling.style.maxHeight = null;
-              otherTrigger.querySelector('svg').classList.remove('rotate-180');
-            }
+          // Header
+          document.getElementById('header-logo-title').textContent = data.header.logo_title;
+          document.getElementById('header-logo-subtitle').textContent = data.header.logo_subtitle;
+          const headerNavContainer = document.getElementById('header-nav-links');
+          data.header.nav_links.forEach(link => {
+            headerNavContainer.innerHTML += `<a href="${link.href}" class="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium">${link.text}</a>`;
           });
-          if (isOpen) {
-            this.setAttribute('aria-expanded', 'false');
-            content.style.maxHeight = null;
-            this.querySelector('svg').classList.remove('rotate-180');
-          } else {
-            this.setAttribute('aria-expanded', 'true');
-            content.style.maxHeight = content.scrollHeight + 'px';
-            this.querySelector('svg').classList.add('rotate-180');
-          }
-        });
-      });
-    }
+          const headerCta = document.getElementById('header-cta-button');
+          headerCta.href = data.header.cta_button.href;
+          headerCta.textContent = data.header.cta_button.text;
 
-    // --- START: Gallery Lightbox Script ---
-    const galleryItems = document.querySelectorAll('.gallery-item');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImage = document.getElementById('lightbox-image');
-    const closeBtn = document.getElementById('lightbox-close');
-    const prevBtn = document.getElementById('lightbox-prev');
-    const nextBtn = document.getElementById('lightbox-next');
+          // Hero
+          document.getElementById('hero-background').style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('${data.hero.background_image}')`;
+          document.getElementById('hero-title-part1').textContent = data.hero.title_part1;
+          document.getElementById('hero-title-part2').textContent = data.hero.title_part2;
+          document.getElementById('hero-subtitle').textContent = data.hero.subtitle;
+          const heroPrimaryCta = document.getElementById('hero-primary-cta');
+          heroPrimaryCta.href = data.hero.primary_cta.href;
+          heroPrimaryCta.textContent = data.hero.primary_cta.text;
+          const heroSecondaryCta = document.getElementById('hero-secondary-cta');
+          heroSecondaryCta.href = data.hero.secondary_cta.href;
+          heroSecondaryCta.textContent = data.hero.secondary_cta.text;
 
-    if (galleryItems.length > 0 && lightbox) {
-      let currentIndex = 0;
-      const imageSources = Array.from(galleryItems).map(item => item.href);
+          // About
+          document.getElementById('about-title-part1').textContent = data.about.title_part1;
+          document.getElementById('about-title-part2').textContent = data.about.title_part2;
+          document.getElementById('about-paragraphs').innerHTML = data.about.paragraphs.map(p => `<p>${p}</p>`).join('');
+          const aboutInstaBtn = document.getElementById('about-instagram-button');
+          aboutInstaBtn.href = data.about.instagram_button.href;
+          aboutInstaBtn.textContent = data.about.instagram_button.text;
+          const aboutImage = document.getElementById('about-image');
+          aboutImage.src = data.about.image.src;
+          aboutImage.alt = data.about.image.alt;
 
-      function showImage(index) {
-        lightboxImage.src = imageSources[index];
-        currentIndex = index;
-      }
+          // Services
+          document.getElementById('services-title-part1').textContent = data.services.title_part1;
+          document.getElementById('services-title-part2').textContent = data.services.title_part2;
+          document.getElementById('services-subtitle').textContent = data.services.subtitle;
+          const plansContainer = document.getElementById('services-plans-container');
+          data.services.plans.forEach(plan => {
+            plansContainer.innerHTML += `
+              <div class="rounded-lg border text-card-foreground shadow-sm relative overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-card ${plan.popular ? 'ring-2 ring-primary shadow-card bg-gradient-card' : 'bg-card hover:bg-gradient-card'}">
+                ${plan.popular ? '<div class="absolute top-0 right-0 bg-primary text-primary-foreground px-4 py-1 text-sm font-medium">Populaire</div>' : ''}
+                <div class="flex flex-col space-y-1.5 p-6 text-center pb-4">
+                  <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-sage/20 flex items-center justify-center">
+                    ${plan.icon_svg}
+                  </div>
+                  <h3 class="tracking-tight text-2xl font-light text-foreground">${plan.title}
+                    <span class="block text-lg text-muted-foreground font-normal">${plan.subtitle}</span>
+                  </h3>
+                </div>
+                <div class="p-6 pt-0 text-center space-y-6">
+                  <p class="text-base leading-relaxed text-muted-foreground">${plan.description}</p>
+                  <div class="py-4">
+                    <span class="text-4xl font-light text-primary">${plan.price}</span>
+                  </div>
+                  <a href="${plan.button.href}" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium h-10 px-4 py-2 w-full ${plan.popular ? 'bg-primary hover:bg-primary/90 text-primary-foreground' : 'bg-secondary hover:bg-primary hover:text-primary-foreground text-secondary-foreground'} transition-all duration-300">${plan.button.text}</a>
+                </div>
+              </div>`;
+          });
+          const servicesBottomLink = document.getElementById('services-bottom-link');
+          servicesBottomLink.href = data.services.bottom_link.href;
+          servicesBottomLink.textContent = data.services.bottom_link.text;
 
-      function openLightbox(e) {
-        e.preventDefault();
-        const index = parseInt(e.currentTarget.dataset.index, 10);
-        showImage(index);
-        lightbox.classList.remove('hidden');
-        lightbox.classList.add('flex');
-        document.body.style.overflow = 'hidden'; // Prevent background scrolling
-      }
+          // Gallery
+          document.getElementById('gallery-title-part1').textContent = data.gallery.title_part1;
+          document.getElementById('gallery-title-part2').textContent = data.gallery.title_part2;
+          document.getElementById('gallery-subtitle').textContent = data.gallery.subtitle;
+          const galleryGrid = document.getElementById('gallery-grid');
+          data.gallery.images.forEach((image, index) => {
+            galleryGrid.innerHTML += `
+              <a href="${image.src}" class="gallery-item group relative overflow-hidden rounded-xl shadow-soft hover:shadow-card transition-all duration-300 ${image.css_class} cursor-pointer" data-index="${index}">
+                <img src="${image.src}" alt="${image.alt}" class="w-full h-64 md:h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"/></svg>
+                </div>
+              </a>`;
+          });
+          document.getElementById('gallery-footer-text').textContent = data.gallery.footer_text;
 
-      function closeLightbox() {
-        lightbox.classList.add('hidden');
-        lightbox.classList.remove('flex');
-        document.body.style.overflow = ''; // Restore scrolling
-      }
+          // Testimonials
+          document.getElementById('testimonials-title-part1').textContent = data.testimonials.title_part1;
+          document.getElementById('testimonials-title-part2').textContent = data.testimonials.title_part2;
+          document.getElementById('testimonials-subtitle').textContent = data.testimonials.subtitle;
+          const testimonialsContainer = document.getElementById('testimonials-container');
+          data.testimonials.items.forEach(item => {
+            testimonialsContainer.innerHTML += `
+              <div class="relative bg-gradient-card shadow-soft hover:shadow-card transition-all duration-300 border-0">
+                <div class="p-8">
+                  <div class="absolute top-6 right-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-sage opacity-50"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg>
+                  </div>
+                  <blockquote class="text-base leading-relaxed text-muted-foreground mb-8 italic">"${item.quote}"</blockquote>
+                  <div class="flex items-center space-x-4">
+                    <span class="relative flex shrink-0 overflow-hidden rounded-full w-12 h-12 bg-sage text-primary-foreground">
+                      <span class="flex h-full w-full items-center justify-center rounded-full bg-sage text-white font-medium">${item.initials}</span>
+                    </span>
+                    <div>
+                      <div class="font-medium text-foreground">${item.name}</div>
+                      <div class="text-sm text-muted-foreground">${item.role}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>`;
+          });
+          document.getElementById('testimonials-footer-text').textContent = data.testimonials.footer_text;
 
-      function showNextImage() {
-        const nextIndex = (currentIndex + 1) % imageSources.length;
-        showImage(nextIndex);
-      }
+          // FAQ
+          document.getElementById('faq-title-part1').textContent = data.faq.title_part1;
+          document.getElementById('faq-title-part2').textContent = data.faq.title_part2;
+          document.getElementById('faq-subtitle').textContent = data.faq.subtitle;
+          const faqContainer = document.getElementById('faq-accordion');
+          data.faq.items.forEach(item => {
+            faqContainer.innerHTML += `
+              <div class="bg-gradient-card rounded-xl px-6 shadow-soft border-0">
+                <h3 class="flex">
+                  <button type="button" class="accordion-trigger flex flex-1 items-center justify-between hover:underline text-left text-lg font-medium text-foreground hover:text-primary transition-colors py-6">
+                    ${item.question}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 shrink-0 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg>
+                  </button>
+                </h3>
+                <div class="accordion-content overflow-hidden text-sm transition-all" style="max-height: 0;">
+                  <div class="pt-0 text-base leading-relaxed text-muted-foreground pb-6">${item.answer}</div>
+                </div>
+              </div>`;
+          });
+          document.getElementById('faq-footer-text').textContent = data.faq.footer_text;
 
-      function showPrevImage() {
-        const prevIndex = (currentIndex - 1 + imageSources.length) % imageSources.length;
-        showImage(prevIndex);
-      }
+          // Booking
+          document.getElementById('booking-title-part1').textContent = data.booking.title_part1;
+          document.getElementById('booking-title-part2').textContent = data.booking.title_part2;
+          document.getElementById('booking-subtitle').textContent = data.booking.subtitle;
+          const bookingInfoContainer = document.getElementById('booking-info-cards-container');
+          data.booking.info_cards.forEach(card => {
+            bookingInfoContainer.innerHTML += `
+              <div class="rounded-lg text-card-foreground shadow-sm bg-gradient-card border-0 shadow-soft text-center">
+                <div class="p-6">
+                  ${card.icon_svg}
+                  <h3 class="font-medium text-foreground mb-1">${card.title}</h3>
+                  <p class="text-sm text-muted-foreground">${card.text}</p>
+                </div>
+              </div>`;
+          });
+          document.getElementById('booking-planning-title').textContent = data.booking.planning.title;
+          document.getElementById('booking-planning-subtitle').textContent = data.booking.planning.subtitle;
+          const planningDaysContainer = document.getElementById('booking-planning-days-container');
+          data.booking.planning.days.forEach(day => {
+            let classesHtml = '';
+            day.classes.forEach(cls => {
+              const isFull = cls.status === 'full';
+              classesHtml += `
+                <div class="flex items-center justify-between p-4 rounded-lg bg-sage-light/20 hover:bg-sage-light/30 transition-colors">
+                  <div class="flex items-center space-x-4">
+                    <div class="text-primary font-medium text-lg">${cls.time}</div>
+                    <div>
+                      <div class="font-medium text-foreground">${cls.name}</div>
+                      <div class="text-sm ${isFull ? 'text-muted-foreground' : 'text-sage'}">${cls.availability}</div>
+                    </div>
+                  </div>
+                  <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium h-10 px-4 py-2 ${isFull ? 'bg-muted text-muted-foreground cursor-not-allowed' : 'bg-primary hover:bg-primary/90 text-primary-foreground'}" ${isFull ? 'disabled' : ''}>${cls.button_text}</button>
+                </div>`;
+            });
+            planningDaysContainer.innerHTML += `
+              <div class="border-b border-border last:border-b-0">
+                <div class="p-6">
+                  <h3 class="font-medium text-foreground mb-4 text-lg">${day.name}</h3>
+                  <div class="space-y-3">${classesHtml}</div>
+                </div>
+              </div>`;
+          });
+          const bookingBottomBtn = document.getElementById('booking-bottom-button');
+          bookingBottomBtn.href = data.booking.bottom_button.href;
+          bookingBottomBtn.textContent = data.booking.bottom_button.text;
 
-      function handleKeydown(e) {
-        if (lightbox.classList.contains('hidden')) return;
-        if (e.key === 'Escape') closeLightbox();
-        if (e.key === 'ArrowRight') showNextImage();
-        if (e.key === 'ArrowLeft') showPrevImage();
-      }
+          // Contact
+          document.getElementById('contact-title-part1').textContent = data.contact.title_part1;
+          document.getElementById('contact-title-part2').textContent = data.contact.title_part2;
+          document.getElementById('contact-subtitle').textContent = data.contact.subtitle;
+          const contactInfoContainer = document.getElementById('contact-info-cards-container');
+          data.contact.info_cards.forEach(card => {
+            contactInfoContainer.innerHTML += `
+              <div class="rounded-lg text-card-foreground shadow-sm bg-gradient-card border-0 shadow-soft hover:shadow-card transition-all duration-300 text-center">
+                <div class="p-8">
+                  <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-sage/20 flex items-center justify-center">${card.icon_svg}</div>
+                  <h3 class="font-medium text-foreground mb-4 text-lg">${card.title}</h3>
+                  <div class="space-y-1 mb-3">
+                    ${card.lines.map(line => `<p class="text-muted-foreground">${line}</p>`).join('')}
+                  </div>
+                  <p class="text-sm text-sage">${card.footnote}</p>
+                </div>
+              </div>`;
+          });
+          document.getElementById('contact-cta-title').textContent = data.contact.cta.title;
+          document.getElementById('contact-cta-text').textContent = data.contact.cta.text;
+          const contactPrimaryBtn = document.getElementById('contact-cta-primary-button');
+          contactPrimaryBtn.href = data.contact.cta.primary_button.href;
+          contactPrimaryBtn.textContent = data.contact.cta.primary_button.text;
+          const contactSecondaryBtn = document.getElementById('contact-cta-secondary-button');
+          contactSecondaryBtn.href = data.contact.cta.secondary_button.href;
+          document.getElementById('contact-cta-secondary-button-text').textContent = data.contact.cta.secondary_button.text;
+          const contactMap = document.getElementById('contact-map-image');
+          contactMap.src = data.contact.map.src;
+          contactMap.alt = data.contact.map.alt;
 
-      galleryItems.forEach(item => item.addEventListener('click', openLightbox));
-      
-      closeBtn.addEventListener('click', closeLightbox);
-      nextBtn.addEventListener('click', showNextImage);
-      prevBtn.addEventListener('click', showPrevImage);
-      
-      // Close lightbox when clicking on the background
-      lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) {
-          closeLightbox();
+          // Footer
+          document.getElementById('footer-logo-title').textContent = data.footer.logo_title;
+          document.getElementById('footer-logo-subtitle').textContent = data.footer.logo_subtitle;
+          document.getElementById('footer-description').textContent = data.footer.description;
+          const footerSocialContainer = document.getElementById('footer-social-links');
+          data.footer.social_links.forEach(link => {
+            footerSocialContainer.innerHTML += `<a href="${link.href}" class="w-10 h-10 bg-sage/20 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300">${link.icon_svg}</a>`;
+          });
+          document.getElementById('footer-nav-title').textContent = data.footer.nav_title;
+          const footerNavContainer = document.getElementById('footer-nav-links');
+          data.footer.nav_links.forEach(link => {
+            footerNavContainer.innerHTML += `<li><a href="${link.href}" class="text-muted-foreground hover:text-primary transition-colors">${link.text}</a></li>`;
+          });
+          document.getElementById('footer-contact-title').textContent = data.footer.contact_title;
+          document.getElementById('footer-contact-info').innerHTML = data.footer.contact_info_html;
+          document.getElementById('footer-copyright').textContent = data.footer.copyright;
+          const footerLegalContainer = document.getElementById('footer-legal-links');
+          data.footer.legal_links.forEach(link => {
+            footerLegalContainer.innerHTML += `<a href="${link.href}" class="text-muted-foreground hover:text-primary text-sm transition-colors">${link.text}</a>`;
+          });
+
+          // Re-initialize dynamic scripts (Accordion, Lightbox)
+          initializeDynamicComponents();
+        })
+        .catch(error => console.error('Error loading content:', error));
+
+      function initializeDynamicComponents() {
+        // Accordion script
+        const accordion = document.getElementById('faq-accordion');
+        if (accordion) {
+          const triggers = accordion.querySelectorAll('.accordion-trigger');
+          triggers.forEach(trigger => {
+            trigger.addEventListener('click', function() {
+              const content = this.parentElement.nextElementSibling;
+              const isOpen = this.getAttribute('aria-expanded') === 'true';
+              triggers.forEach(otherTrigger => {
+                if (otherTrigger !== this) {
+                  otherTrigger.setAttribute('aria-expanded', 'false');
+                  otherTrigger.parentElement.nextElementSibling.style.maxHeight = null;
+                  otherTrigger.querySelector('svg').classList.remove('rotate-180');
+                }
+              });
+              if (isOpen) {
+                this.setAttribute('aria-expanded', 'false');
+                content.style.maxHeight = null;
+                this.querySelector('svg').classList.remove('rotate-180');
+              } else {
+                this.setAttribute('aria-expanded', 'true');
+                content.style.maxHeight = content.scrollHeight + 'px';
+                this.querySelector('svg').classList.add('rotate-180');
+              }
+            });
+          });
         }
-      });
 
-      document.addEventListener('keydown', handleKeydown);
-    }
-    // --- END: Gallery Lightbox Script ---
-  });
-</script>
-  
+        // Gallery Lightbox Script
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightbox-image');
+        const closeBtn = document.getElementById('lightbox-close');
+        const prevBtn = document.getElementById('lightbox-prev');
+        const nextBtn = document.getElementById('lightbox-next');
+
+        if (galleryItems.length > 0 && lightbox) {
+          let currentIndex = 0;
+          const imageSources = Array.from(galleryItems).map(item => item.href);
+
+          function showImage(index) {
+            lightboxImage.src = imageSources[index];
+            currentIndex = index;
+          }
+
+          function openLightbox(e) {
+            e.preventDefault();
+            const index = parseInt(e.currentTarget.dataset.index, 10);
+            showImage(index);
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+          }
+
+          function closeLightbox() {
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+            document.body.style.overflow = '';
+          }
+
+          function showNextImage() {
+            const nextIndex = (currentIndex + 1) % imageSources.length;
+            showImage(nextIndex);
+          }
+
+          function showPrevImage() {
+            const prevIndex = (currentIndex - 1 + imageSources.length) % imageSources.length;
+            showImage(prevIndex);
+          }
+
+          function handleKeydown(e) {
+            if (lightbox.classList.contains('hidden')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') showNextImage();
+            if (e.key === 'ArrowLeft') showPrevImage();
+          }
+
+          galleryItems.forEach(item => item.addEventListener('click', openLightbox));
+          closeBtn.addEventListener('click', closeLightbox);
+          nextBtn.addEventListener('click', showNextImage);
+          prevBtn.addEventListener('click', showPrevImage);
+          lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+          });
+          document.addEventListener('keydown', handleKeydown);
+        }
+      }
+    });
+  </script>
 </body>
-
 </html>
