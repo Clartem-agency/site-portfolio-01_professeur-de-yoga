@@ -1,64 +1,74 @@
 {
-  "hero": {
-    "background_image": "images/hero-background.webp",
-    "title": "Retrouvez votre calme intérieur, <span class=\"block text-sage-light\">au cœur de la ville</span>",
-    "subtitle": "L'Instant Présent, votre studio de yoga à Lille. Des cours en petits groupes pour une pratique authentique et apaisante.",
-    "button1_text": "Voir le planning & Réserver",
-    "button1_link": "#booking",
-    "button2_text": "Découvrir le studio",
-    "button2_link": "#about"
+  "contact": {
+    "map_alt": "Plan d'accès au studio de yoga L'Instant Présent",
+    "access_info": "Métro République Beaux-Arts (2 min à pied)",
+    "phone": "06 12 34 56 78",
+    "hours": [
+      {
+        "line": "Lun-Ven : 12h-21h"
+      },
+      {
+        "line": "Sam : 9h-18h"
+      },
+      {
+        "line": "Dim : Fermé"
+      }
+    ],
+    "subtitle": "Toutes les informations pratiques pour nous rejoindre",
+    "map_image": "images/carte-acces.webp",
+    "title": "Contact & <span class=\"block text-primary\">Accès</span>",
+    "email": "contact@linstantpresent-lille.fr",
+    "address1": "15 rue de la Paix",
+    "address2": "59000 Lille"
   },
   "about": {
     "title": "Mon Histoire : De la Robe d'Avocate <span class=\"block text-primary\">au Tapis de Yoga</span>",
-    "text": "Pendant 10 ans, ma vie était rythmée par les dossiers urgents et la pression constante. J'étais avocate à Paris, et j'avais oublié l'essentiel : respirer. Le burn-out n'a pas été une fin, mais un commencement. C'est sur un tapis de yoga que j'ai réappris à écouter mon corps et à apaiser mon esprit.\n\nCette expérience a transformé ma vie. J'ai alors décidé de partager ce cadeau. Aujourd'hui, ma mission avec L'Instant Présent est simple : vous offrir une véritable parenthèse, un refuge loin de l'agitation.\n\n<p class=\"text-primary font-medium\">Ici, pas de compétition, juste une écoute bienveillante pour vous aider à vous reconnecter à vous-même, à votre rythme.</p>",
+    "text": "Pendant 10 ans, ma vie était rythmée par les dossiers urgents et la pression constante. J'étais avocate à Paris, et j'avais oublié l'essentiel : respirer. Le burn-out n'a pas été une fin, mais un commencement. C'est sur un tapis de yoga que j'ai réappris à écouter mon corps et à apaiser mon esprit.  ***texte 2 ajouté pour un test !***\n\nCette expérience a transformé ma vie. J'ai alors décidé de partager ce cadeau. Aujourd'hui, ma mission avec L'Instant Présent est simple : vous offrir une véritable parenthèse, un refuge loin de l'agitation.\n\n<p class=\"text-primary font-medium\">Ici, pas de compétition, juste une écoute bienveillante pour vous aider à vous reconnecter à vous-même, à votre rythme.</p>",
     "insta_button_text": "Suivez nos coulisses sur Instagram",
     "insta_button_link": "#",
     "image": "images/professeure-chloe.webp",
     "image_alt": "Chloé Moreau, professeure de yoga"
   },
-  "services": {
-    "title": "Nos Cours & <span class=\"block text-primary\">Formules</span>",
-    "subtitle": "Choisissez la formule qui correspond à votre rythme et à vos besoins",
-    "cards": [
-      {
-        "title": "Cours Découverte",
-        "subtitle": "(à l'unité)",
-        "description": "Idéal pour une première fois ou une pratique occasionnelle. Venez tester une séance sans engagement.",
-        "price": "18€",
-        "button_text": "Choisir cette formule",
-        "popular": false
-      },
-      {
-        "title": "Carte Liberté",
-        "subtitle": "(10 cours)",
-        "description": "Pratiquez à votre rythme avec une flexibilité totale. La carte est valable 6 mois.",
-        "price": "150€",
-        "button_text": "Choisir cette formule",
-        "popular": true
-      },
-      {
-        "title": "Abonnement Sanctuaire",
-        "subtitle": "(Mensuel)",
-        "description": "Pour une pratique régulière et un engagement profond envers votre bien-être. Accès illimité à tous les cours.",
-        "price": "85€/mois",
-        "button_text": "Choisir cette formule",
-        "popular": false
-      }
-    ]
-  },
   "gallery": {
     "title": "Bienvenue dans <span class=\"block text-primary\">votre refuge</span>",
     "subtitle": "Découvrez l'atmosphère apaisante de notre studio",
     "images": [
-      { "image": "images/galerie-studio-large.webp", "alt": "Vue large du studio L'Instant Présent, baigné de lumière" },
-      { "image": "images/galerie-coin-tisane.webp", "alt": "Coin tisane avec livre sur la pleine conscience" },
-      { "image": "images/galerie-accessoires.webp", "alt": "Accessoires de yoga : tapis, brique et sangle" },
-      { "image": "images/galerie-cours-session.webp", "alt": "Cours de yoga en session avec plusieurs participants" },
-      { "image": "images/galerie-lumiere-naturelle.webp", "alt": "Vue de l'intérieur du studio un jour de pluie, ambiance refuge" },
-      { "image": "images/galerie-facade-exterieure.webp", "alt": "Façade extérieure du studio de yoga" },
-      { "image": "images/galerie-meditation.webp", "alt": "Personne en posture de méditation, vue de dos" },
-      { "image": "images/galerie-details-deco-01.webp", "alt": "Détail de la décoration du studio avec bougie et statuette" },
-      { "image": "images/galerie-details-deco-02.webp", "alt": "Détails de la décoration du studio : livres sur la méditation, plante et encens sur un banc en bois." }
+      {
+        "image": "images/galerie-studio-large.webp",
+        "alt": "Vue large du studio L'Instant Présent, baigné de lumière"
+      },
+      {
+        "image": "images/galerie-coin-tisane.webp",
+        "alt": "Coin tisane avec livre sur la pleine conscience"
+      },
+      {
+        "image": "images/galerie-accessoires.webp",
+        "alt": "Accessoires de yoga : tapis, brique et sangle"
+      },
+      {
+        "image": "images/galerie-cours-session.webp",
+        "alt": "Cours de yoga en session avec plusieurs participants"
+      },
+      {
+        "image": "images/galerie-lumiere-naturelle.webp",
+        "alt": "Vue de l'intérieur du studio un jour de pluie, ambiance refuge"
+      },
+      {
+        "image": "images/galerie-facade-exterieure.webp",
+        "alt": "Façade extérieure du studio de yoga"
+      },
+      {
+        "image": "images/galerie-meditation.webp",
+        "alt": "Personne en posture de méditation, vue de dos"
+      },
+      {
+        "image": "images/galerie-details-deco-01.webp",
+        "alt": "Détail de la décoration du studio avec bougie et statuette"
+      },
+      {
+        "image": "images/galerie-details-deco-02.webp",
+        "alt": "Détails de la décoration du studio : livres sur la méditation, plante et encens sur un banc en bois."
+      }
     ]
   },
   "testimonials": {
@@ -121,60 +131,133 @@
       {
         "day_name": "Lundi",
         "classes": [
-          { "time": "18:30", "name": "Hatha Yoga Doux", "availability": "3 places", "is_full": false },
-          { "time": "20:00", "name": "Vinyasa Flow", "availability": "Complet", "is_full": true }
+          {
+            "time": "18:30",
+            "name": "Hatha Yoga Doux",
+            "availability": "3 places",
+            "is_full": false
+          },
+          {
+            "time": "20:00",
+            "name": "Vinyasa Flow",
+            "availability": "Complet",
+            "is_full": true
+          }
         ]
       },
       {
         "day_name": "Mardi",
         "classes": [
-          { "time": "12:30", "name": "Yoga du Midi", "availability": "5 places", "is_full": false },
-          { "time": "19:00", "name": "Yin Yoga", "availability": "2 places", "is_full": false }
+          {
+            "time": "12:30",
+            "name": "Yoga du Midi",
+            "availability": "5 places",
+            "is_full": false
+          },
+          {
+            "time": "19:00",
+            "name": "Yin Yoga",
+            "availability": "2 places",
+            "is_full": false
+          }
         ]
       },
       {
         "day_name": "Mercredi",
         "classes": [
-          { "time": "18:30", "name": "Hatha Yoga", "availability": "4 places", "is_full": false },
-          { "time": "20:00", "name": "Méditation", "availability": "8 places", "is_full": false }
+          {
+            "time": "18:30",
+            "name": "Hatha Yoga",
+            "availability": "4 places",
+            "is_full": false
+          },
+          {
+            "time": "20:00",
+            "name": "Méditation",
+            "availability": "8 places",
+            "is_full": false
+          }
         ]
       },
       {
         "day_name": "Jeudi",
         "classes": [
-          { "time": "12:30", "name": "Yoga du Midi", "availability": "1 place", "is_full": false },
-          { "time": "19:00", "name": "Vinyasa Flow", "availability": "6 places", "is_full": false }
+          {
+            "time": "12:30",
+            "name": "Yoga du Midi",
+            "availability": "1 place",
+            "is_full": false
+          },
+          {
+            "time": "19:00",
+            "name": "Vinyasa Flow",
+            "availability": "6 places",
+            "is_full": false
+          }
         ]
       },
       {
         "day_name": "Vendredi",
         "classes": [
-          { "time": "18:30", "name": "Hatha Yoga Doux", "availability": "Complet", "is_full": true },
-          { "time": "20:00", "name": "Yoga Restauratif", "availability": "3 places", "is_full": false }
+          {
+            "time": "18:30",
+            "name": "Hatha Yoga Doux",
+            "availability": "Complet",
+            "is_full": true
+          },
+          {
+            "time": "20:00",
+            "name": "Yoga Restauratif",
+            "availability": "3 places",
+            "is_full": false
+          }
         ]
       }
     ]
   },
-  "contact": {
-    "title": "Contact & <span class=\"block text-primary\">Accès</span>",
-    "subtitle": "Toutes les informations pratiques pour nous rejoindre",
-    "address1": "15 rue de la Paix",
-    "address2": "59000 Lille",
-    "access_info": "Métro République Beaux-Arts (2 min à pied)",
-    "phone": "06 12 34 56 78",
-    "email": "contact@linstantpresent-lille.fr",
-    "hours": [
-      { "line": "Lun-Ven : 12h-21h" },
-      { "line": "Sam : 9h-18h" },
-      { "line": "Dim : Fermé" }
-    ],
-    "map_image": "images/carte-acces.webp",
-    "map_alt": "Plan d'accès au studio de yoga L'Instant Présent"
+  "hero": {
+    "background_image": "images/hero-background.webp",
+    "title": "Retrouvez votre calme intérieur, <span class=\"block text-sage-light\">au cœur de la ville</span>",
+    "subtitle": "L'Instant Présent, votre studio de yoga à Lille. Des cours en petits groupes pour une pratique authentique et apaisante. texte ajouté pour un test !",
+    "button1_text": "Voir le planning & Réserver",
+    "button1_link": "#booking",
+    "button2_text": "Découvrir le studio",
+    "button2_link": "#about"
   },
   "footer": {
     "description": "Votre refuge au cœur de la ville. Une pratique authentique du yoga pour retrouver votre calme intérieur et vous reconnecter à vous-même.",
     "instagram_link": "#",
     "email_link": "mailto:contact@linstantpresent-lille.fr",
     "copyright": "© 2024 L'Instant Présent. Tous droits réservés."
+  },
+  "services": {
+    "title": "Nos Cours & <span class=\"block text-primary\">Formules</span>",
+    "subtitle": "Choisissez la formule qui correspond à votre rythme et à vos besoins",
+    "cards": [
+      {
+        "title": "Cours Découverte",
+        "subtitle": "(à l'unité)",
+        "description": "Idéal pour une première fois ou une pratique occasionnelle. Venez tester une séance sans engagement.",
+        "price": "18€",
+        "button_text": "Choisir cette formule",
+        "popular": false
+      },
+      {
+        "title": "Carte Liberté",
+        "subtitle": "(10 cours)",
+        "description": "Pratiquez à votre rythme avec une flexibilité totale. La carte est valable 6 mois.",
+        "price": "150€",
+        "button_text": "Choisir cette formule",
+        "popular": true
+      },
+      {
+        "title": "Abonnement Sanctuaire",
+        "subtitle": "(Mensuel)",
+        "description": "Pour une pratique régulière et un engagement profond envers votre bien-être. Accès illimité à tous les cours.",
+        "price": "85€/mois",
+        "button_text": "Choisir cette formule",
+        "popular": false
+      }
+    ]
   }
 }
