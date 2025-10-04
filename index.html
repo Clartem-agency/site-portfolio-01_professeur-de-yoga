@@ -533,7 +533,7 @@
             faqContainer.innerHTML += `
               <div class="bg-gradient-card rounded-xl px-6 shadow-soft border-0">
                 <h3 class="flex">
-                  <button type="button" class="accordion-trigger flex flex-1 items-center justify-between hover:underline text-left text-lg font-medium text-foreground hover:text-primary transition-colors py-6">
+                  <button type="button" class="accordion-trigger flex flex-1 items-center justify-between hover:underline text-left text-lg font-medium text-foreground hover:text-primary transition-colors py-6" aria-expanded="false">
                     ${item.question}
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 shrink-0 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg>
                   </button>
@@ -648,34 +648,41 @@
         .catch(error => console.error('Error loading content:', error));
 
       function initializeDynamicComponents() {
-        // --- START: CORRECTED Accordion script ---
+        // --- START: FINAL CORRECTED Accordion script ---
         const accordion = document.getElementById('faq-accordion');
         if (accordion) {
-          const allTriggers = accordion.querySelectorAll('.accordion-trigger');
-          
-          accordion.addEventListener('click', function(event) {
-            const trigger = event.target.closest('.accordion-trigger');
-            if (!trigger) return; // Exit if the click was not on a trigger button
+            accordion.addEventListener('click', function(event) {
+                const clickedTrigger = event.target.closest('.accordion-trigger');
+                if (!clickedTrigger) return;
 
-            const content = trigger.parentElement.nextElementSibling;
-            const isOpen = trigger.getAttribute('aria-expanded') === 'true';
+                const currentlyOpenTrigger = accordion.querySelector('.accordion-trigger[aria-expanded="true"]');
 
-            // First, close all items
-            allTriggers.forEach(otherTrigger => {
-              otherTrigger.setAttribute('aria-expanded', 'false');
-              otherTrigger.parentElement.nextElementSibling.style.maxHeight = null;
-              otherTrigger.querySelector('svg').classList.remove('rotate-180');
+                // If there is an open trigger and it's not the one we just clicked, close it.
+                if (currentlyOpenTrigger && currentlyOpenTrigger !== clickedTrigger) {
+                    const openContent = currentlyOpenTrigger.parentElement.nextElementSibling;
+                    currentlyOpenTrigger.setAttribute('aria-expanded', 'false');
+                    openContent.style.maxHeight = null;
+                    currentlyOpenTrigger.querySelector('svg').classList.remove('rotate-180');
+                }
+
+                // Now, toggle the state of the clicked trigger.
+                const clickedContent = clickedTrigger.parentElement.nextElementSibling;
+                const isCurrentlyOpen = clickedTrigger.getAttribute('aria-expanded') === 'true';
+
+                if (isCurrentlyOpen) {
+                    // It was open, so close it.
+                    clickedTrigger.setAttribute('aria-expanded', 'false');
+                    clickedContent.style.maxHeight = null;
+                    clickedTrigger.querySelector('svg').classList.remove('rotate-180');
+                } else {
+                    // It was closed, so open it.
+                    clickedTrigger.setAttribute('aria-expanded', 'true');
+                    clickedContent.style.maxHeight = clickedContent.scrollHeight + 'px';
+                    clickedTrigger.querySelector('svg').classList.add('rotate-180');
+                }
             });
-
-            // If the clicked item was not already open, then open it
-            if (!isOpen) {
-              trigger.setAttribute('aria-expanded', 'true');
-              content.style.maxHeight = content.scrollHeight + 'px';
-              trigger.querySelector('svg').classList.add('rotate-180');
-            }
-          });
         }
-        // --- END: CORRECTED Accordion script ---
+        // --- END: FINAL CORRECTED Accordion script ---
 
         // Gallery Lightbox Script
         const galleryItems = document.querySelectorAll('.gallery-item');
