@@ -1,0 +1,125 @@
+# Fichier : admin/config.yml
+
+backend:
+  name: git-gateway
+  branch: main # Assurez-vous que c'est bien votre branche principale
+
+# Configuration des médias (images)
+media_folder: "images" # Dossier où les nouvelles images seront uploadées
+public_folder: "/images" # Chemin public pour accéder aux images
+
+# Collection de contenu
+collections:
+  - name: "pages"
+    label: "Gestion du Site"
+    files:
+      - file: "content.json"
+        label: "Page d'Accueil"
+        name: "accueil"
+        fields:
+          # --- Section Héros (Bannière principale) ---
+          - { label: "Héros", name: "hero", widget: "object", fields: [
+              { label: "Image de fond", name: "background_image", widget: "image" },
+              { label: "Titre", name: "title", widget: "string", hint: "Vous pouvez utiliser des balises HTML comme <span> pour le style." },
+              { label: "Sous-titre", name: "subtitle", widget: "text" },
+              { label: "Texte Bouton 1", name: "button1_text", widget: "string" },
+              { label: "Lien Bouton 1", name: "button1_link", widget: "string", default: "#booking" },
+              { label: "Texte Bouton 2", name: "button2_text", widget: "string" },
+              { label: "Lien Bouton 2", name: "button2_link", widget: "string", default: "#about" }
+            ]}
+
+          # --- Section À Propos ---
+          - { label: "À Propos", name: "about", widget: "object", fields: [
+              { label: "Titre", name: "title", widget: "string", hint: "Vous pouvez utiliser des balises HTML comme <span>." },
+              { label: "Texte", name: "text", widget: "markdown" },
+              { label: "Texte du bouton Instagram", name: "insta_button_text", widget: "string" },
+              { label: "Lien du bouton Instagram", name: "insta_button_link", widget: "string" },
+              { label: "Image de la professeure", name: "image", widget: "image" },
+              { label: "Texte alternatif de l'image", name: "image_alt", widget: "string" }
+            ]}
+
+          # --- Section Cours & Formules ---
+          - { label: "Cours & Formules", name: "services", widget: "object", fields: [
+              { label: "Titre", name: "title", widget: "string" },
+              { label: "Sous-titre", name: "subtitle", widget: "text" },
+              { label: "Formules (cartes de prix)", name: "cards", widget: "list", fields: [
+                  { label: "Titre", name: "title", widget: "string" },
+                  { label: "Sous-titre", name: "subtitle", widget: "string" },
+                  { label: "Description", name: "description", widget: "text" },
+                  { label: "Prix", name: "price", widget: "string" },
+                  { label: "Texte du bouton", name: "button_text", widget: "string" },
+                  { label: "Marquer comme 'Populaire' ?", name: "popular", widget: "boolean", default: false }
+                ]}
+            ]}
+
+          # --- Section Galerie ---
+          - { label: "Galerie", name: "gallery", widget: "object", fields: [
+              { label: "Titre", name: "title", widget: "string" },
+              { label: "Sous-titre", name: "subtitle", widget: "text" },
+              { label: "Images", name: "images", widget: "list", fields: [
+                  { label: "Image", name: "image", widget: "image" },
+                  { label: "Texte alternatif", name: "alt", widget: "string" }
+                ]}
+            ]}
+
+          # --- Section Témoignages ---
+          - { label: "Témoignages", name: "testimonials", widget: "object", fields: [
+              { label: "Titre", name: "title", widget: "string" },
+              { label: "Sous-titre", name: "subtitle", widget: "text" },
+              { label: "Avis des élèves", name: "reviews", widget: "list", fields: [
+                  { label: "Citation", name: "quote", widget: "text" },
+                  { label: "Auteur", name: "author", widget: "string" },
+                  { label: "Poste/Rôle", name: "role", widget: "string" }
+                ]}
+            ]}
+
+          # --- Section FAQ ---
+          - { label: "FAQ", name: "faq", widget: "object", fields: [
+              { label: "Titre", name: "title", widget: "string" },
+              { label: "Sous-titre", name: "subtitle", widget: "text" },
+              { label: "Questions/Réponses", name: "items", widget: "list", fields: [
+                  { label: "Question", name: "question", widget: "string" },
+                  { label: "Réponse", name: "answer", widget: "markdown" }
+                ]}
+            ]}
+
+          # --- Section Planning & Réservation ---
+          - { label: "Planning", name: "booking", widget: "object", fields: [
+              { label: "Titre", name: "title", widget: "string" },
+              { label: "Sous-titre", name: "subtitle", widget: "text" },
+              { label: "Titre du planning", name: "schedule_title", widget: "string" },
+              { label: "Sous-titre du planning (ex: dates)", name: "schedule_subtitle", widget: "string" },
+              { label: "Jours du planning", name: "schedule_days", widget: "list", fields: [
+                  { label: "Jour", name: "day_name", widget: "string" },
+                  { label: "Cours", name: "classes", widget: "list", fields: [
+                      { label: "Heure", name: "time", widget: "string" },
+                      { label: "Nom du cours", name: "name", widget: "string" },
+                      { label: "Disponibilité", name: "availability", widget: "string", hint: "Ex: '3 places', 'Complet', '1 place'" },
+                      { label: "Cours complet ?", name: "is_full", widget: "boolean", default: false }
+                    ]}
+                ]}
+            ]}
+
+          # --- Section Contact & Accès ---
+          - { label: "Contact", name: "contact", widget: "object", fields: [
+              { label: "Titre", name: "title", widget: "string" },
+              { label: "Sous-titre", name: "subtitle", widget: "text" },
+              { label: "Adresse Ligne 1", name: "address1", widget: "string" },
+              { label: "Adresse Ligne 2", name: "address2", widget: "string" },
+              { label: "Info accès (métro)", name: "access_info", widget: "string" },
+              { label: "Téléphone", name: "phone", widget: "string" },
+              { label: "Email", name: "email", widget: "string" },
+              { label: "Horaires", name: "hours", widget: "list", fields: [
+                  { label: "Ligne horaire", name: "line", widget: "string" }
+                ]},
+              { label: "Image du plan", name: "map_image", widget: "image" },
+              { label: "Texte alternatif du plan", name: "map_alt", widget: "string" }
+            ]}
+          
+          # --- Pied de page (Footer) ---
+          - { label: "Pied de page", name: "footer", widget: "object", fields: [
+              { label: "Description courte", name: "description", widget: "text" },
+              { label: "Lien Instagram", name: "instagram_link", widget: "string" },
+              { label: "Lien Email (mailto:)", name: "email_link", widget: "string" },
+              { label: "Texte du Copyright", name: "copyright", widget: "string" }
+            ]}
