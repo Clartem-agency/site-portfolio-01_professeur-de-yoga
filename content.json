@@ -1,99 +1,202 @@
 {
-  "contact": {
-    "map_alt": "Plan d'accès au studio de yoga L'Instant Présent",
-    "access_info": "Métro République Beaux-Arts (2 min à pied)",
-    "phone": "06 12 34 56 78",
-    "hours": [
+  "meta": {
+    "title": "L'Instant Présent - Studio de Yoga à Lille",
+    "description": "Studio de yoga authentique à Lille. Cours en petits groupes pour retrouver votre calme intérieur. Professeure certifiée, réservation en ligne."
+  },
+  "header": {
+    "logo_title": "L'Instant Présent",
+    "logo_subtitle": "Studio de Yoga • Lille",
+    "nav_links": [
       {
-        "line": "Lun-Ven : 12h-21h"
+        "text": "Accueil",
+        "href": "#hero"
       },
       {
-        "line": "Sam : 9h-18h"
+        "text": "À propos",
+        "href": "#about"
       },
       {
-        "line": "Dim : Fermé"
+        "text": "Cours",
+        "href": "#services"
+      },
+      {
+        "text": "Galerie",
+        "href": "#gallery"
+      },
+      {
+        "text": "Planning",
+        "href": "#booking"
+      },
+      {
+        "text": "Contact",
+        "href": "#contact"
       }
     ],
-    "subtitle": "Toutes les informations pratiques pour nous rejoindre",
-    "map_image": "images/carte-acces.webp",
-    "title": "Contact & <span class=\"block text-primary\">Accès</span>",
-    "email": "contact@linstantpresent-lille.fr",
-    "address1": "15 rue de la Paix",
-    "address2": "59000 Lille"
+    "cta_button": {
+      "text": "Réserver",
+      "href": "#booking"
+    }
+  },
+  "hero": {
+    "background_image": "images/hero-background.webp",
+    "title_part1": "Retrouvez votre calme intérieur,",
+    "title_part2": "au cœur de la ville",
+    "subtitle": "L'Instant Présent, votre studio de yoga à Lille. Des cours en petits groupes pour une pratique authentique et apaisante.",
+    "primary_cta": {
+      "text": "Voir le planning & Réserver",
+      "href": "#booking"
+    },
+    "secondary_cta": {
+      "text": "Découvrir le studio",
+      "href": "#about"
+    }
   },
   "about": {
-    "title": "Mon Histoire : De la Robe d'Avocate <span class=\"block text-primary\">au Tapis de Yoga</span>",
-    "text": "Pendant 10 ans, ma vie était rythmée par les dossiers urgents et la pression constante. J'étais avocate à Paris, et j'avais oublié l'essentiel : respirer. Le burn-out n'a pas été une fin, mais un commencement. C'est sur un tapis de yoga que j'ai réappris à écouter mon corps et à apaiser mon esprit.  ***texte 2 ajouté pour un test !***\n\nCette expérience a transformé ma vie. J'ai alors décidé de partager ce cadeau. Aujourd'hui, ma mission avec L'Instant Présent est simple : vous offrir une véritable parenthèse, un refuge loin de l'agitation.\n\n<p class=\"text-primary font-medium\">Ici, pas de compétition, juste une écoute bienveillante pour vous aider à vous reconnecter à vous-même, à votre rythme.</p>",
-    "insta_button_text": "Suivez nos coulisses sur Instagram",
-    "insta_button_link": "#",
-    "image": "images/professeure-chloe.webp",
-    "image_alt": "Chloé Moreau, professeure de yoga"
+    "title_part1": "Mon Histoire : De la Robe d'Avocate",
+    "title_part2": "au Tapis de Yoga",
+    "paragraphs": [
+      "Pendant 10 ans, ma vie était rythmée par les dossiers urgents et la pression constante. J'étais avocate à Paris, et j'avais oublié l'essentiel : respirer. Le burn-out n'a pas été une fin, mais un commencement. C'est sur un tapis de yoga que j'ai réappris à écouter mon corps et à apaiser mon esprit.",
+      "Cette expérience a transformé ma vie. J'ai alors décidé de partager ce cadeau. Aujourd'hui, ma mission avec L'Instant Présent est simple : vous offrir une véritable parenthèse, un refuge loin de l'agitation.",
+      "Ici, pas de compétition, juste une écoute bienveillante pour vous aider à vous reconnecter à vous-même, à votre rythme."
+    ],
+    "instagram_button": {
+      "text": "Suivez nos coulisses sur Instagram",
+      "href": "#"
+    },
+    "image": {
+      "src": "images/professeure-chloe.webp",
+      "alt": "Chloé Moreau, professeure de yoga"
+    }
+  },
+  "services": {
+    "title_part1": "Nos Cours &",
+    "title_part2": "Formules",
+    "subtitle": "Choisissez la formule qui correspond à votre rythme et à vos besoins",
+    "plans": [
+      {
+        "popular": false,
+        "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"w-8 h-8 text-primary\"><path d=\"M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z\"></path><path d=\"M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12\"></path></svg>",
+        "title": "Cours Découverte",
+        "subtitle": "(à l'unité)",
+        "description": "Idéal pour une première fois ou une pratique occasionnelle. Venez tester une séance sans engagement.",
+        "price": "18€",
+        "button": {
+          "text": "Choisir cette formule",
+          "href": "#booking"
+        }
+      },
+      {
+        "popular": true,
+        "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"w-8 h-8 text-primary\"><path d=\"M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1\"></path><path d=\"M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1\"></path><path d=\"M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1\"></path></svg>",
+        "title": "Carte Liberté",
+        "subtitle": "(10 cours)",
+        "description": "Pratiquez à votre rythme avec une flexibilité totale. La carte est valable 6 mois.",
+        "price": "150€",
+        "button": {
+          "text": "Choisir cette formule",
+          "href": "#booking"
+        }
+      },
+      {
+        "popular": false,
+        "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"w-8 h-8 text-primary\"><path d=\"M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z\"></path></svg>",
+        "title": "Abonnement Sanctuaire",
+        "subtitle": "(Mensuel)",
+        "description": "Pour une pratique régulière et un engagement profond envers votre bien-être. Accès illimité à tous les cours.",
+        "price": "85€/mois",
+        "button": {
+          "text": "Choisir cette formule",
+          "href": "#booking"
+        }
+      }
+    ],
+    "bottom_link": {
+      "text": "Consultez le planning complet pour trouver votre créneau",
+      "href": "#booking"
+    }
   },
   "gallery": {
-    "title": "Bienvenue dans <span class=\"block text-primary\">votre refuge</span>",
+    "title_part1": "Bienvenue dans",
+    "title_part2": "votre refuge",
     "subtitle": "Découvrez l'atmosphère apaisante de notre studio",
     "images": [
       {
-        "image": "images/galerie-studio-large.webp",
-        "alt": "Vue large du studio L'Instant Présent, baigné de lumière"
+        "src": "images/galerie-studio-large.webp",
+        "alt": "Vue large du studio L'Instant Présent, baigné de lumière",
+        "css_class": "col-span-2 md:col-span-2 md:row-span-2"
       },
       {
-        "image": "images/galerie-coin-tisane.webp",
-        "alt": "Coin tisane avec livre sur la pleine conscience"
+        "src": "images/galerie-coin-tisane.webp",
+        "alt": "Coin tisane avec livre sur la pleine conscience",
+        "css_class": ""
       },
       {
-        "image": "images/galerie-accessoires.webp",
-        "alt": "Accessoires de yoga : tapis, brique et sangle"
+        "src": "images/galerie-accessoires.webp",
+        "alt": "Accessoires de yoga : tapis, brique et sangle",
+        "css_class": ""
       },
       {
-        "image": "images/galerie-cours-session.webp",
-        "alt": "Cours de yoga en session avec plusieurs participants"
+        "src": "images/galerie-cours-session.webp",
+        "alt": "Cours de yoga en session avec plusieurs participants",
+        "css_class": ""
       },
       {
-        "image": "images/galerie-lumiere-naturelle.webp",
-        "alt": "Vue de l'intérieur du studio un jour de pluie, ambiance refuge"
+        "src": "images/galerie-lumiere-naturelle.webp",
+        "alt": "Vue de l'intérieur du studio un jour de pluie, ambiance refuge",
+        "css_class": ""
       },
       {
-        "image": "images/galerie-facade-exterieure.webp",
-        "alt": "Façade extérieure du studio de yoga"
+        "src": "images/galerie-facade-exterieure.webp",
+        "alt": "Façade extérieure du studio de yoga",
+        "css_class": ""
       },
       {
-        "image": "images/galerie-meditation.webp",
-        "alt": "Personne en posture de méditation, vue de dos"
+        "src": "images/galerie-meditation.webp",
+        "alt": "Personne en posture de méditation, vue de dos",
+        "css_class": ""
       },
       {
-        "image": "images/galerie-details-deco-01.webp",
-        "alt": "Détail de la décoration du studio avec bougie et statuette"
+        "src": "images/galerie-details-deco-01.webp",
+        "alt": "Détail de la décoration du studio avec bougie et statuette",
+        "css_class": ""
       },
       {
-        "image": "images/galerie-details-deco-02.webp",
-        "alt": "Détails de la décoration du studio : livres sur la méditation, plante et encens sur un banc en bois."
+        "src": "images/galerie-details-deco-02.webp",
+        "alt": "Détails de la décoration du studio : livres sur la méditation, plante et encens sur un banc en bois.",
+        "css_class": ""
       }
-    ]
+    ],
+    "footer_text": "Chaque détail a été pensé pour votre bien-être et votre sérénité"
   },
   "testimonials": {
-    "title": "Ce qu'en disent <span class=\"block text-primary\">nos élèves</span>",
+    "title_part1": "Ce qu'en disent",
+    "title_part2": "nos élèves",
     "subtitle": "Des témoignages authentiques de transformation et de bien-être",
-    "reviews": [
+    "items": [
       {
         "quote": "J'étais au bord de l'épuisement. Le studio de Chloé est plus qu'une salle de sport, c'est une bulle d'oxygène. Son approche douce et sa voix apaisante m'ont permis de déconnecter. Je ressors de chaque cours plus légère et centrée.",
-        "author": "Marie Dubois",
+        "initials": "MD",
+        "name": "Marie Dubois",
         "role": "Directrice Marketing"
       },
       {
         "quote": "Le mal de dos lié au télétravail devenait insupportable. Grâce aux cours en petit comité, Chloé a pu corriger mes postures. En un mois, j'ai senti une différence incroyable. Et la facilité de réservation en ligne est un vrai plus.",
-        "author": "Thomas Leroy",
+        "initials": "TL",
+        "name": "Thomas Leroy",
         "role": "Développeur Web"
       },
       {
         "quote": "Après une journée stressante, le studio de Chloé est mon havre de paix. L'ambiance est authentique, loin des 'usines à yoga'. Ici, on prend le temps, on respecte chaque corps, chaque rythme. C'est exactement ce que je cherchais.",
-        "author": "Sophie Martin",
+        "initials": "SM",
+        "name": "Sophie Martin",
         "role": "Consultante RH"
       }
-    ]
+    ],
+    "footer_text": "Rejoignez notre communauté bienveillante et commencez votre transformation"
   },
   "faq": {
-    "title": "Vos Questions, <span class=\"block text-primary\">Nos Réponses</span>",
+    "title_part1": "Vos Questions,",
+    "title_part2": "Nos Réponses",
     "subtitle": "Toutes les informations pour vous accompagner dans votre pratique",
     "items": [
       {
@@ -120,143 +223,251 @@
         "question": "Y a-t-il un parking ?",
         "answer": "Le studio est situé en centre-ville avec plusieurs options de stationnement à proximité. Un parking public se trouve à 2 minutes à pied, et plusieurs places de stationnement gratuit sont disponibles dans les rues adjacentes."
       }
-    ]
+    ],
+    "footer_text": "Une autre question ? N'hésitez pas à nous contacter directement."
   },
   "booking": {
-    "title": "Réservez <span class=\"block text-primary\">Votre Tapis</span>",
+    "title_part1": "Réservez",
+    "title_part2": "Votre Tapis",
     "subtitle": "Consultez nos disponibilités en temps réel et réservez votre prochaine séance en quelques clics.",
-    "schedule_title": "Planning de la semaine",
-    "schedule_subtitle": "Semaine du 4 au 8 novembre 2024",
-    "schedule_days": [
+    "info_cards": [
       {
-        "day_name": "Lundi",
-        "classes": [
-          {
-            "time": "18:30",
-            "name": "Hatha Yoga Doux",
-            "availability": "3 places",
-            "is_full": false
-          },
-          {
-            "time": "20:00",
-            "name": "Vinyasa Flow",
-            "availability": "Complet",
-            "is_full": true
-          }
-        ]
+        "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"w-8 h-8 text-primary mx-auto mb-3\"><path d=\"M8 2v4\"></path><path d=\"M16 2v4\"></path><rect width=\"18\" height=\"18\" x=\"3\" y=\"4\" rx=\"2\"></rect><path d=\"M3 10h18\"></path></svg>",
+        "title": "Réservation",
+        "text": "En ligne 24h/7j"
       },
       {
-        "day_name": "Mardi",
-        "classes": [
-          {
-            "time": "12:30",
-            "name": "Yoga du Midi",
-            "availability": "5 places",
-            "is_full": false
-          },
-          {
-            "time": "19:00",
-            "name": "Yin Yoga",
-            "availability": "2 places",
-            "is_full": false
-          }
-        ]
+        "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"w-8 h-8 text-primary mx-auto mb-3\"><path d=\"M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2\"></path><circle cx=\"9\" cy=\"7\" r=\"4\"></circle><path d=\"M22 21v-2a4 4 0 0 0-3-3.87\"></path><path d=\"M16 3.13a4 4 0 0 1 0 7.75\"></path></svg>",
+        "title": "Petits groupes",
+        "text": "12 personnes max"
       },
       {
-        "day_name": "Mercredi",
-        "classes": [
-          {
-            "time": "18:30",
-            "name": "Hatha Yoga",
-            "availability": "4 places",
-            "is_full": false
-          },
-          {
-            "time": "20:00",
-            "name": "Méditation",
-            "availability": "8 places",
-            "is_full": false
-          }
-        ]
+        "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"w-8 h-8 text-primary mx-auto mb-3\"><circle cx=\"12\" cy=\"12\" r=\"10\"></circle><polyline points=\"12 6 12 12 16 14\"></polyline></svg>",
+        "title": "Flexibilité",
+        "text": "Annulation 12h avant"
       },
       {
-        "day_name": "Jeudi",
-        "classes": [
-          {
-            "time": "12:30",
-            "name": "Yoga du Midi",
-            "availability": "1 place",
-            "is_full": false
-          },
-          {
-            "time": "19:00",
-            "name": "Vinyasa Flow",
-            "availability": "6 places",
-            "is_full": false
-          }
-        ]
-      },
-      {
-        "day_name": "Vendredi",
-        "classes": [
-          {
-            "time": "18:30",
-            "name": "Hatha Yoga Doux",
-            "availability": "Complet",
-            "is_full": true
-          },
-          {
-            "time": "20:00",
-            "name": "Yoga Restauratif",
-            "availability": "3 places",
-            "is_full": false
-          }
-        ]
+        "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"w-8 h-8 text-primary mx-auto mb-3\"><path d=\"M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0\"></path><circle cx=\"12\" cy=\"10\" r=\"3\"></circle></svg>",
+        "title": "Centre-ville",
+        "text": "Lille, proche métro"
       }
-    ]
+    ],
+    "planning": {
+      "title": "Planning de la semaine",
+      "subtitle": "Semaine du 4 au 8 novembre 2024",
+      "days": [
+        {
+          "name": "Lundi",
+          "classes": [
+            {
+              "time": "18:30",
+              "name": "Hatha Yoga Doux",
+              "availability": "3 places",
+              "status": "available",
+              "button_text": "Réserver"
+            },
+            {
+              "time": "20:00",
+              "name": "Vinyasa Flow",
+              "availability": "Complet",
+              "status": "full",
+              "button_text": "Complet"
+            }
+          ]
+        },
+        {
+          "name": "Mardi",
+          "classes": [
+            {
+              "time": "12:30",
+              "name": "Yoga du Midi",
+              "availability": "5 places",
+              "status": "available",
+              "button_text": "Réserver"
+            },
+            {
+              "time": "19:00",
+              "name": "Yin Yoga",
+              "availability": "2 places",
+              "status": "available",
+              "button_text": "Réserver"
+            }
+          ]
+        },
+        {
+          "name": "Mercredi",
+          "classes": [
+            {
+              "time": "18:30",
+              "name": "Hatha Yoga",
+              "availability": "4 places",
+              "status": "available",
+              "button_text": "Réserver"
+            },
+            {
+              "time": "20:00",
+              "name": "Méditation",
+              "availability": "8 places",
+              "status": "available",
+              "button_text": "Réserver"
+            }
+          ]
+        },
+        {
+          "name": "Jeudi",
+          "classes": [
+            {
+              "time": "12:30",
+              "name": "Yoga du Midi",
+              "availability": "1 place",
+              "status": "available",
+              "button_text": "Réserver"
+            },
+            {
+              "time": "19:00",
+              "name": "Vinyasa Flow",
+              "availability": "6 places",
+              "status": "available",
+              "button_text": "Réserver"
+            }
+          ]
+        },
+        {
+          "name": "Vendredi",
+          "classes": [
+            {
+              "time": "18:30",
+              "name": "Hatha Yoga Doux",
+              "availability": "Complet",
+              "status": "full",
+              "button_text": "Complet"
+            },
+            {
+              "time": "20:00",
+              "name": "Yoga Restauratif",
+              "availability": "3 places",
+              "status": "available",
+              "button_text": "Réserver"
+            }
+          ]
+        }
+      ]
+    },
+    "bottom_button": {
+      "text": "Voir le planning complet du mois",
+      "href": "#booking"
+    }
   },
-  "hero": {
-    "background_image": "images/hero-background.webp",
-    "title": "Retrouvez votre calme intérieur, <span class=\"block text-sage-light\">au cœur de la ville</span>",
-    "subtitle": "L'Instant Présent, votre studio de yoga à Lille. Des cours en petits groupes pour une pratique authentique et apaisante. texte ajouté pour un test !",
-    "button1_text": "Voir le planning & Réserver",
-    "button1_link": "#booking",
-    "button2_text": "Découvrir le studio",
-    "button2_link": "#about"
+  "contact": {
+    "title_part1": "Contact &",
+    "title_part2": "Accès",
+    "subtitle": "Toutes les informations pratiques pour nous rejoindre",
+    "info_cards": [
+      {
+        "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"w-8 h-8 text-primary\"><path d=\"M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0\"></path><circle cx=\"12\" cy=\"10\" r=\"3\"></circle></svg>",
+        "title": "Adresse",
+        "lines": [
+          "15 rue de la Paix",
+          "59000 Lille"
+        ],
+        "footnote": "Métro République Beaux-Arts (2 min à pied)"
+      },
+      {
+        "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"w-8 h-8 text-primary\"><path d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z\"></path></svg>",
+        "title": "Téléphone",
+        "lines": [
+          "06 12 34 56 78"
+        ],
+        "footnote": "Réponse sous 24h"
+      },
+      {
+        "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"w-8 h-8 text-primary\"><rect width=\"20\" height=\"16\" x=\"2\" y=\"4\" rx=\"2\"></rect><path d=\"m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7\"></path></svg>",
+        "title": "Email",
+        "lines": [
+          "contact@linstantpresent-lille.fr"
+        ],
+        "footnote": "Pour toute question"
+      },
+      {
+        "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"w-8 h-8 text-primary\"><circle cx=\"12\" cy=\"12\" r=\"10\"></circle><polyline points=\"12 6 12 12 16 14\"></polyline></svg>",
+        "title": "Horaires du studio",
+        "lines": [
+          "Lun-Ven : 12h-21h",
+          "Sam : 9h-18h",
+          "Dim : Fermé"
+        ],
+        "footnote": "Réservation en ligne 24h/7j"
+      }
+    ],
+    "cta": {
+      "title": "Prêt(e) à commencer votre voyage ?",
+      "text": "Rejoignez notre communauté bienveillante et découvrez les bienfaits d'une pratique régulière du yoga. Votre transformation commence par un simple premier pas.",
+      "primary_button": {
+        "text": "Réserver mon premier cours",
+        "href": "#booking"
+      },
+      "secondary_button": {
+        "text": "Suivre sur Instagram",
+        "href": "#"
+      }
+    },
+    "map": {
+      "src": "images/carte-acces.webp",
+      "alt": "Plan d'accès au studio de yoga L'Instant Présent"
+    }
   },
   "footer": {
+    "logo_title": "L'Instant Présent",
+    "logo_subtitle": "Studio de Yoga • Lille",
     "description": "Votre refuge au cœur de la ville. Une pratique authentique du yoga pour retrouver votre calme intérieur et vous reconnecter à vous-même.",
-    "instagram_link": "#",
-    "email_link": "mailto:contact@linstantpresent-lille.fr",
-    "copyright": "© 2024 L'Instant Présent. Tous droits réservés."
-  },
-  "services": {
-    "title": "Nos Cours & <span class=\"block text-primary\">Formules</span>",
-    "subtitle": "Choisissez la formule qui correspond à votre rythme et à vos besoins",
-    "cards": [
+    "social_links": [
       {
-        "title": "Cours Découverte",
-        "subtitle": "(à l'unité)",
-        "description": "Idéal pour une première fois ou une pratique occasionnelle. Venez tester une séance sans engagement.",
-        "price": "18€",
-        "button_text": "Choisir cette formule",
-        "popular": false
+        "href": "#",
+        "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"w-5 h-5\"><rect width=\"20\" height=\"20\" x=\"2\" y=\"2\" rx=\"5\" ry=\"5\"></rect><path d=\"M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z\"></path><line x1=\"17.5\" x2=\"17.51\" y1=\"6.5\" y2=\"6.5\"></line></svg>"
       },
       {
-        "title": "Carte Liberté",
-        "subtitle": "(10 cours)",
-        "description": "Pratiquez à votre rythme avec une flexibilité totale. La carte est valable 6 mois.",
-        "price": "150€",
-        "button_text": "Choisir cette formule",
-        "popular": true
+        "href": "#",
+        "icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"w-5 h-5\"><rect width=\"20\" height=\"16\" x=\"2\" y=\"4\" rx=\"2\"></rect><path d=\"m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7\"></path></svg>"
+      }
+    ],
+    "nav_title": "Navigation",
+    "nav_links": [
+      {
+        "text": "À propos",
+        "href": "#about"
       },
       {
-        "title": "Abonnement Sanctuaire",
-        "subtitle": "(Mensuel)",
-        "description": "Pour une pratique régulière et un engagement profond envers votre bien-être. Accès illimité à tous les cours.",
-        "price": "85€/mois",
-        "button_text": "Choisir cette formule",
-        "popular": false
+        "text": "Nos cours",
+        "href": "#services"
+      },
+      {
+        "text": "Galerie",
+        "href": "#gallery"
+      },
+      {
+        "text": "Planning",
+        "href": "#booking"
+      },
+      {
+        "text": "Contact",
+        "href": "#contact"
+      }
+    ],
+    "contact_title": "Contact",
+    "contact_info_html": "<li class=\"flex items-start space-x-3\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"w-5 h-5 text-primary mt-0.5 flex-shrink-0\"><path d=\"M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0\"></path><circle cx=\"12\" cy=\"10\" r=\"3\"></circle></svg><div class=\"text-muted-foreground\"><div>15 rue de la Paix</div><div>59000 Lille</div></div></li><li class=\"flex items-center space-x-3\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"w-5 h-5 text-primary flex-shrink-0\"><path d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z\"></path></svg><span class=\"text-muted-foreground\">06 12 34 56 78</span></li><li class=\"flex items-center space-x-3\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"w-5 h-5 text-primary flex-shrink-0\"><rect width=\"20\" height=\"16\" x=\"2\" y=\"4\" rx=\"2\"></rect><path d=\"m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7\"></path></svg><span class=\"text-muted-foreground\">contact@linstantpresent-lille.fr</span></li>",
+    "copyright": "© 2024 L'Instant Présent. Tous droits réservés.",
+    "legal_links": [
+      {
+        "text": "Mentions légales",
+        "href": "#"
+      },
+      {
+        "text": "Politique de confidentialité",
+        "href": "#"
+      },
+      {
+        "text": "CGV",
+        "href": "#"
       }
     ]
   }
