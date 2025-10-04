@@ -648,41 +648,40 @@
         .catch(error => console.error('Error loading content:', error));
 
       function initializeDynamicComponents() {
-        // --- START: FINAL CORRECTED Accordion script ---
+        // --- START: NEW AND FINAL Accordion script ---
         const accordion = document.getElementById('faq-accordion');
         if (accordion) {
-            accordion.addEventListener('click', function(event) {
-                const clickedTrigger = event.target.closest('.accordion-trigger');
-                if (!clickedTrigger) return;
+            const triggers = accordion.querySelectorAll('.accordion-trigger');
+            triggers.forEach(trigger => {
+                trigger.addEventListener('click', function() {
+                    const wasOpen = this.getAttribute('aria-expanded') === 'true';
 
-                const currentlyOpenTrigger = accordion.querySelector('.accordion-trigger[aria-expanded="true"]');
+                    // Close all other accordions before opening/closing the current one
+                    triggers.forEach(otherTrigger => {
+                        if (otherTrigger !== this) {
+                            otherTrigger.setAttribute('aria-expanded', 'false');
+                            otherTrigger.parentElement.nextElementSibling.style.maxHeight = null;
+                            otherTrigger.querySelector('svg').classList.remove('rotate-180');
+                        }
+                    });
 
-                // If there is an open trigger and it's not the one we just clicked, close it.
-                if (currentlyOpenTrigger && currentlyOpenTrigger !== clickedTrigger) {
-                    const openContent = currentlyOpenTrigger.parentElement.nextElementSibling;
-                    currentlyOpenTrigger.setAttribute('aria-expanded', 'false');
-                    openContent.style.maxHeight = null;
-                    currentlyOpenTrigger.querySelector('svg').classList.remove('rotate-180');
-                }
-
-                // Now, toggle the state of the clicked trigger.
-                const clickedContent = clickedTrigger.parentElement.nextElementSibling;
-                const isCurrentlyOpen = clickedTrigger.getAttribute('aria-expanded') === 'true';
-
-                if (isCurrentlyOpen) {
-                    // It was open, so close it.
-                    clickedTrigger.setAttribute('aria-expanded', 'false');
-                    clickedContent.style.maxHeight = null;
-                    clickedTrigger.querySelector('svg').classList.remove('rotate-180');
-                } else {
-                    // It was closed, so open it.
-                    clickedTrigger.setAttribute('aria-expanded', 'true');
-                    clickedContent.style.maxHeight = clickedContent.scrollHeight + 'px';
-                    clickedTrigger.querySelector('svg').classList.add('rotate-180');
-                }
+                    // Now toggle the current accordion
+                    if (wasOpen) {
+                        // If it was open, close it
+                        this.setAttribute('aria-expanded', 'false');
+                        this.parentElement.nextElementSibling.style.maxHeight = null;
+                        this.querySelector('svg').classList.remove('rotate-180');
+                    } else {
+                        // If it was closed, open it
+                        const content = this.parentElement.nextElementSibling;
+                        this.setAttribute('aria-expanded', 'true');
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        this.querySelector('svg').classList.add('rotate-180');
+                    }
+                });
             });
         }
-        // --- END: FINAL CORRECTED Accordion script ---
+        // --- END: NEW AND FINAL Accordion script ---
 
         // Gallery Lightbox Script
         const galleryItems = document.querySelectorAll('.gallery-item');
