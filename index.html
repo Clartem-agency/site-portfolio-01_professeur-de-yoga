@@ -648,39 +648,36 @@
         .catch(error => console.error('Error loading content:', error));
 
       function initializeDynamicComponents() {
-        // --- START: FINAL, SIMPLIFIED, AND CORRECT Accordion script ---
+        // Accordion script - CORRIGÉ
         const accordion = document.getElementById('faq-accordion');
         if (accordion) {
-            // Use Event Delegation: Attach one listener to the parent container.
-            accordion.addEventListener('click', function(event) {
-                const trigger = event.target.closest('.accordion-trigger');
-
-                // If the click was not on a button, do nothing.
-                if (!trigger) {
-                    return;
-                }
-
-                const content = trigger.parentElement.nextElementSibling;
-                const allTriggers = accordion.querySelectorAll('.accordion-trigger');
-                const wasOpen = trigger.getAttribute('aria-expanded') === 'true';
-
-                // First, close all items. This simplifies the logic immensely.
-                allTriggers.forEach(t => {
-                    t.setAttribute('aria-expanded', 'false');
-                    t.parentElement.nextElementSibling.style.maxHeight = null;
-                    t.querySelector('svg').classList.remove('rotate-180');
-                });
-
-                // If the clicked item was closed, open it.
-                // If it was already open, the loop above has already closed it, so we do nothing more.
-                if (!wasOpen) {
-                    trigger.setAttribute('aria-expanded', 'true');
-                    content.style.maxHeight = content.scrollHeight + 'px';
-                    trigger.querySelector('svg').classList.add('rotate-180');
-                }
+          accordion.addEventListener('click', function(event) {
+            const trigger = event.target.closest('.accordion-trigger');
+            
+            if (!trigger) return;
+            
+            const content = trigger.parentElement.nextElementSibling;
+            const icon = trigger.querySelector('svg');
+            const isOpen = trigger.getAttribute('aria-expanded') === 'true';
+            
+            // Fermer tous les accordéons
+            const allTriggers = accordion.querySelectorAll('.accordion-trigger');
+            allTriggers.forEach(t => {
+              const c = t.parentElement.nextElementSibling;
+              const i = t.querySelector('svg');
+              t.setAttribute('aria-expanded', 'false');
+              c.style.maxHeight = '0';
+              i.classList.remove('rotate-180');
             });
+            
+            // Si l'élément cliqué était fermé, l'ouvrir
+            if (!isOpen) {
+              trigger.setAttribute('aria-expanded', 'true');
+              content.style.maxHeight = content.scrollHeight + 'px';
+              icon.classList.add('rotate-180');
+            }
+          });
         }
-        // --- END: FINAL, SIMPLIFIED, AND CORRECT Accordion script ---
 
         // Gallery Lightbox Script
         const galleryItems = document.querySelectorAll('.gallery-item');
